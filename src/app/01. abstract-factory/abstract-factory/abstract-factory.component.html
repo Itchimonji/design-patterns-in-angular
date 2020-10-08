@@ -1,0 +1,21 @@
+<p>abstract-factory works!</p>
+<div class="container">
+  <div
+    *ngIf="selectedTheme"
+    [ngClass]="selectedTheme.getStyleName()"
+    [style.fontFamily]="selectedTheme.getFontName()"
+  >
+    <h1>
+      Welcome to an example for object-base abstract factory
+    </h1>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Theme selection</mat-label>
+      <mat-select [(ngModel)]="selectedTheme">
+        <mat-option *ngFor="let theme of themes" [value]="theme">
+          {{theme.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>

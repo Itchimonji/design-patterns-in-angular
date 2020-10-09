@@ -1,0 +1,22 @@
+div {
+  text-align: center;
+}
+
+div.light {
+  background-color: white;
+  color: black;
+}
+
+div.dark {
+  background-color: #616161;
+  color: white;
+}
+
+div.personal {
+  background-color: #e0e0e0;
+  color: #ff6e40;
+}
+
+mat-form-field {
+  margin-top: 30px;
+}

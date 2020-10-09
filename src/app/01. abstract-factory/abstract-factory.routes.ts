@@ -5,7 +5,7 @@ import {AbstractFactoryComponent} from './abstract-factory/abstract-factory.comp
 const routes: Routes = [{ path: '', component: AbstractFactoryComponent }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: "legacy" })],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class AbstractFactoryRoutingModule { }

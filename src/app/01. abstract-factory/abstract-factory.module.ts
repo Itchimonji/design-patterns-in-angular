@@ -10,10 +10,10 @@ import {CommonModule} from '@angular/common';
     AbstractFactoryComponent
   ],
   imports: [
-    AngularMaterialModule,
-    AbstractFactoryRoutingModule,
+    CommonModule,
     FormsModule,
-    CommonModule
+    AngularMaterialModule,
+    AbstractFactoryRoutingModule
   ]
 })
 export class AbstractFactoryModule { }

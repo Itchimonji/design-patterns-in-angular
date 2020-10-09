@@ -1,0 +1,33 @@
+
+<div class="container">
+  <h1>
+    Singleton
+  </h1>
+  <div class="description">
+    id stays the same, because we don't create a new instance. If you reload the page, there would be a new instance, because the component (parent of teas) is destroyed and initialized
+  </div>
+  <div class="flex-row">
+    <mat-card>
+      <mat-card-title>
+        {{ blackTea.getType() }}
+      </mat-card-title>
+      <mat-card-content>
+        <div>id: {{ blackTea.getId() }}</div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="btnGetNewBlackTeaInstance()">Refresh black tea</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>
+        {{ fruitTea.getType() }}
+      </mat-card-title>
+      <mat-card-content>
+        <div>id: {{ fruitTea.getId() }}</div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="btnGetNewFruitTeaInstance()">Refresh fruit tea</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

@@ -3,12 +3,13 @@ import { AbstractStyle } from './style.model';
 import { AbstractFont } from './font.model';
 
 export interface AbstractTheme {
+  name: string;
   getStyleName(): string;
   getFontName(): string;
 }
 
 export class Theme implements AbstractTheme {
-  private name: string;
+  public name: string;
   private style: AbstractStyle;
   private font: AbstractFont;
 

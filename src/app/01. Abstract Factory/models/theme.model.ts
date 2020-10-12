@@ -2,6 +2,7 @@ import { AbstractFactory } from './factory.model';
 import { AbstractStyle } from './style.model';
 import { AbstractFont } from './font.model';
 
+// Client
 export interface AbstractTheme {
   name: string;
   getStyleName(): string;

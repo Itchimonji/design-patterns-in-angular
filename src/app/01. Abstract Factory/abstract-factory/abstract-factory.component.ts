@@ -17,9 +17,14 @@ export class AbstractFactoryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.themes.push(new Theme(new LightThemeFactory, 'Light theme'));
-    this.themes.push(new Theme(new DarkThemeFactory, 'Dark theme'));
-    this.themes.push(new Theme(new PersonalThemeFactory, 'Personal theme'));
+    // I split this up for better readability
+    const lightTheme: Theme = new Theme(new LightThemeFactory, 'Light theme');
+    this.themes.push(lightTheme);
+    const darkTheme: Theme = new Theme(new DarkThemeFactory, 'Dark theme');
+    this.themes.push(darkTheme);
+    const personalTheme: Theme = new Theme(new PersonalThemeFactory, 'Personal theme');
+    this.themes.push(personalTheme);
+
     this.selectedTheme = this.themes[0];
   }
 

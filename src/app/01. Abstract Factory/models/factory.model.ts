@@ -1,37 +1,37 @@
-import * as styles from './style.model';
-import * as fonts from './font.model';
+import { AbstractStyle, DarkThemeStyle, LightThemeStyle, PersonalThemeStyle } from './style.model';
+import { AbstractFont, DarkThemeFont, LightThemeFont, PersonalThemeFont } from './font.model';
 
 export interface AbstractFactory {
-  createStyle(): styles.AbstractStyle;
-  createFont(): fonts.AbstractFont;
+  createStyle(): AbstractStyle;
+  createFont(): AbstractFont;
 }
 
 export class DarkThemeFactory implements AbstractFactory {
-  public createStyle(): styles.AbstractStyle {
-    return new styles.DarkThemeStyle();
+  public createStyle(): AbstractStyle {
+    return new DarkThemeStyle();
   }
 
-  public createFont(): fonts.AbstractFont {
-    return new fonts.DarkThemeFont();
+  public createFont(): AbstractFont {
+    return new DarkThemeFont();
   }
 }
 
 export class LightThemeFactory implements AbstractFactory {
-  public createStyle(): styles.AbstractStyle {
-    return new styles.LightThemeStyle();
+  public createStyle(): AbstractStyle {
+    return new LightThemeStyle();
   }
 
-  public createFont(): fonts.AbstractFont {
-    return new fonts.LightThemeFont();
+  public createFont(): AbstractFont {
+    return new LightThemeFont();
   }
 }
 
 export class PersonalThemeFactory implements AbstractFactory {
-  public createStyle(): styles.AbstractStyle {
-    return new styles.PersonalThemeStyle();
+  public createStyle(): AbstractStyle {
+    return new PersonalThemeStyle();
   }
 
-  public createFont(): fonts.AbstractFont {
-    return new fonts.PersonalThemeFont();
+  public createFont(): AbstractFont {
+    return new PersonalThemeFont();
   }
 }

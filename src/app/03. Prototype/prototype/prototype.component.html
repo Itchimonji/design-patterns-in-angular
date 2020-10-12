@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>
+    Prototype
+  </h1>
+  <mat-card>
+    <mat-card-title>
+      Cars
+    </mat-card-title>
+    <mat-card-actions>
+      <mat-form-field appearance="fill">
+        <mat-label>Favorite food</mat-label>
+        <mat-select [(ngModel)]="selectedColor" name="color">
+          <mat-option value="red">red</mat-option>
+          <mat-option value="blue">blue</mat-option>
+          <mat-option value="green">green</mat-option>
+          <mat-option value="black">black</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button (click)="btnCopyLastCarWithNewColor()">Copy</button>
+    </mat-card-actions>
+    <mat-card-content>
+      <div *ngFor="let car of cars">
+        <div *ngIf="car">
+          {{ car.name }} with {{car.color}} color
+        </div>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+</div>

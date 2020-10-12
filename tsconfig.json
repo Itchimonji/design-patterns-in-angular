@@ -24,8 +24,10 @@
     "strictBindCallApply": true,
     "resolveJsonModule": true,
     "paths": {
-      "@abstract-factory": ["./src/app/01. abstract-factory/*"],
-      "@singleton": ["./src/app/01. singleton/*"]
+      "@abstract-factory": ["./src/app/01. Abstract Factory/*"],
+      "@singleton": ["./src/app/02. Singleton/*"],
+      "@prototype": ["./src/app/03. Prototype/*"],
+      "@builder": ["./src/app/04. Builder/*"]
     }
   },
   "angularCompilerOptions": {

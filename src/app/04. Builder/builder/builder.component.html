@@ -1,1 +1,19 @@
-<p>builder works!</p>
+<div class="container">
+  <h1>
+    Builder
+  </h1>
+
+  <mat-card *ngFor="let house of houses; index as i">
+    <mat-card-title>House {{i+1}}</mat-card-title>
+    <mat-card-content>
+      <div>walls: {{house.walls}}</div>
+      <div>doors: {{house.doors}}</div>
+      <div>windows: {{house.windows}}</div>
+      <div>garden: {{house.garden}}</div>
+      <div>pool: {{house.pool}}</div>
+      <div>floors: {{house.floors}}</div>
+      <div>basement: {{house.basement}}</div>
+    </mat-card-content>
+  </mat-card>
+</div>
+

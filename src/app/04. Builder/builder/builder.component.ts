@@ -21,12 +21,12 @@ export class BuilderComponent implements OnInit {
     const director = new Director();
     director.setBuilder(builder);
 
-    director.buildFamilyHouse();
-    const familyHouse = builder.get();
+    director.constructFamilyHouse();
+    const familyHouse = builder.getResult();
     this.houses.push(familyHouse);
 
-    director.buildVilla();
-    const villa = builder.get();
+    director.constructVilla();
+    const villa = builder.getResult();
     this.houses.push(villa);
   }
 

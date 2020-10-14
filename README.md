@@ -9,7 +9,7 @@
 
 ##### UML
 
-![Example](./readme/images/01.%20Abstract%20Factory.jpg)
+![AbstractFactory](./readme/images/01.%20Abstract%20Factory.jpg)
 
 ##### UML for this repo example
 
@@ -22,6 +22,14 @@
 ### Builder
 
 - visual resource: https://refactoring.guru/design-patterns/builder
+
+##### UML
+
+![Builder](./readme/images/04.%20Builder.jpg)
+
+##### UML for this repo example
+
+![Example](./readme/images/04.%20Builder%20example.jpg)
 
 ### Factory Method
 

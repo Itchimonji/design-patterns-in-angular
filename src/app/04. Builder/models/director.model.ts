@@ -7,22 +7,22 @@ export class Director {
     this.builder = builder;
   }
 
-  public buildVilla(): void {
-    this.builder.createWalls(42);
-    this.builder.createBasement();
-    this.builder.createDoors(15);
-    this.builder.createFloors(7);
-    this.builder.createGarden();
-    this.builder.createPool();
-    this.builder.createWindows(75);
+  public constructVilla(): void {
+    this.builder.buildWalls(42);
+    this.builder.buildBasement();
+    this.builder.buildDoors(15);
+    this.builder.buildFloors(7);
+    this.builder.buildGarden();
+    this.builder.buildPool();
+    this.builder.buildWindows(75);
   }
 
-  public buildFamilyHouse(): void {
-    this.builder.createWalls(17);
-    this.builder.createBasement();
-    this.builder.createWindows(32);
-    this.builder.createDoors(7);
-    this.builder.createFloors(2);
-    this.builder.createGarden();
+  public constructFamilyHouse(): void {
+    this.builder.buildWalls(17);
+    this.builder.buildBasement();
+    this.builder.buildWindows(32);
+    this.builder.buildDoors(7);
+    this.builder.buildFloors(2);
+    this.builder.buildGarden();
   }
 }

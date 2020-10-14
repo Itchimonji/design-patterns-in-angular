@@ -1,13 +1,14 @@
-import {House, HouseModel } from './house.model';
+import { House, HouseModel } from './house.model';
 
 export interface Builder {
-  createWalls(count: number): void;
-  createDoors(count: number): void;
-  createWindows(count: number): void;
-  createGarden(): void;
-  createPool(): void;
-  createFloors(count: number): void;
-  createBasement(): void;
+  buildWalls(count: number): void;
+  buildDoors(count: number): void;
+  buildWindows(count: number): void;
+  buildGarden(): void;
+  buildPool(): void;
+  buildFloors(count: number): void;
+  buildBasement(): void;
+  getResult(): House;
 }
 
 export class HouseBuilder implements Builder {
@@ -17,39 +18,42 @@ export class HouseBuilder implements Builder {
     this.reset();
   }
 
-  public reset(): void {
+  private reset(): void {
     this.house = new HouseModel();
   }
 
-  public createWalls(count: number): void {
+  // e.g. buildPartA
+  public buildWalls(count: number): void {
     this.house.walls = count;
   }
 
-  public createDoors(count: number): void {
+  // e.g. buildPartB
+  public buildDoors(count: number): void {
     this.house.doors = count;
   }
 
-  public createWindows(count: number): void {
+  // e.g. buildPartC
+  public buildWindows(count: number): void {
     this.house.windows = count;
   }
 
-  public createGarden(): void {
+  public buildGarden(): void {
     this.house.garden = true;
   }
 
-  public createPool(): void {
+  public buildPool(): void {
     this.house.pool = true;
   }
 
-  public createFloors(count: number): void {
+  public buildFloors(count: number): void {
     this.house.floors = count;
   }
 
-  public createBasement(): void {
+  public buildBasement(): void {
     this.house.basement = true;
   }
 
-  public get(): House {
+  public getResult(): House {
     const result = this.house;
     this.reset();
     return result;

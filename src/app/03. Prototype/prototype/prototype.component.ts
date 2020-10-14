@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CarPrototype} from '../models/car.model';
-import {Engine, PetrolEngine} from '../models/engine.model';
+import { CarPrototype, Prototype } from '../models/car.model';
+import { Engine, PetrolEngine } from '../models/engine.model';
 
 @Component({
   selector: 'app-prototype',
@@ -9,11 +9,11 @@ import {Engine, PetrolEngine} from '../models/engine.model';
 })
 export class PrototypeComponent implements OnInit {
 
-  public cars: CarPrototype[];
+  public cars: Prototype[];
   public selectedColor: string;
 
   constructor() {
-    this.cars = new Array<CarPrototype>();
+    this.cars = new Array<Prototype>();
   }
 
   ngOnInit(): void {
@@ -23,9 +23,8 @@ export class PrototypeComponent implements OnInit {
   }
 
   btnCopyLastCarWithNewColor(): void {
-    const newCar: CarPrototype = this.cars[this.cars.length - 1].clone();
+    const newCar: Prototype = this.cars[this.cars.length - 1].clone();
     newCar.color = this.selectedColor;
     this.cars.push(newCar);
   }
-
 }

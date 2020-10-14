@@ -1,6 +1,12 @@
-import {Engine} from './engine.model';
+import { Engine } from './engine.model';
 
-export class CarPrototype {
+export interface Prototype {
+  name: string;
+  color: string;
+  clone(): Prototype;
+}
+
+export class CarPrototype implements Prototype {
   public name: string;
   public color: string;
   private engine: Engine;
@@ -11,11 +17,7 @@ export class CarPrototype {
     this.engine = engine;
   }
 
-  public getEngine(): Engine {
-    return this.engine;
-  }
-
-  public clone(): CarPrototype {
+  public clone(): Prototype {
     // https://stackoverflow.com/a/53442750/14427814
     return Object.assign(Object.create(this), this);
   }

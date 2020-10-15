@@ -1,1 +1,20 @@
-<p>factory-method works!</p>
+<div class="container">
+  <h1>
+    Factory Method
+  </h1>
+  <mat-card>
+    <mat-card-title>
+      Food planning
+    </mat-card-title>
+    <mat-card-actions>
+      <button mat-raised-button (click)="btnEatPizza()">Eat Pizza</button>
+      <button mat-raised-button (click)="btnEatWrap()">Eat Wrap</button>
+      <button mat-raised-button (click)="btnEatTacko()">Eat Tacko</button>
+    </mat-card-actions>
+    <mat-card-content>
+      <div *ngFor="let currentMeal of foodPlanning; trackBy: trackByFn">
+        {{ currentMeal.activity }}
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

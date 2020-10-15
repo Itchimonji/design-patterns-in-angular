@@ -7,6 +7,7 @@
 
 ### Abstract Factory
 
+- short description: create families of related objects (with abstract classes)
 - visual resource: https://refactoring.guru/design-patterns/abstract-factory
 
 ##### UML
@@ -21,6 +22,14 @@
 
 - short description: hold one instance globally
 - visual resource: https://refactoring.guru/design-patterns/singleton
+
+##### UML
+
+![Builder](./readme/images/02.%20Singleton.jpg)
+
+##### UML for this repo example
+
+![Example](./readme/images/02.%20Singleton%20example.jpg)
 
 ### Prototype
 
@@ -50,4 +59,5 @@
 
 ### Factory Method
 
+- short description: provide an interface for creating objects in superclass
 - visual resource: https://refactoring.guru/design-patterns/factory-method

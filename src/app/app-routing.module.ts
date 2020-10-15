@@ -15,8 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./03. Prototype/prototype.module').then(m => m.PrototypeModule)
   },
   { path: 'builder',
-    loadChildren: () => import('./04. Builder/builder.module').then(m => m.BuilderModule) },
-  { path: 'factory-method', loadChildren: () => import('./05. Factory Method/factory-method.module').then(m => m.FactoryMethodModule) }
+    loadChildren: () => import('./04. Builder/builder.module').then(m => m.BuilderModule)
+  },
+  { path: 'factory-method',
+    loadChildren: () => import('./05. Factory Method/factory-method.module').then(m => m.FactoryMethodModule) }
 ];
 
 @NgModule({

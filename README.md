@@ -61,3 +61,11 @@
 
 - short description: provide an interface for creating objects in superclass
 - visual resource: https://refactoring.guru/design-patterns/factory-method
+
+##### UML
+
+![Builder](./readme/images/05.%20Factory%20Method.jpg)
+
+##### UML for this repo example
+
+![Factory Method Example](./readme/images/05.%20Factory%20Method%20example.jpg)

@@ -14,11 +14,16 @@ const routes: Routes = [
     path: 'prototype',
     loadChildren: () => import('./03. Prototype/prototype.module').then(m => m.PrototypeModule)
   },
-  { path: 'builder',
+  {
+    path: 'builder',
     loadChildren: () => import('./04. Builder/builder.module').then(m => m.BuilderModule)
   },
-  { path: 'factory-method',
-    loadChildren: () => import('./05. Factory Method/factory-method.module').then(m => m.FactoryMethodModule) }
+  {
+    path: 'factory-method',
+    loadChildren: () => import('./05. Factory Method/factory-method.module').then(m => m.FactoryMethodModule) },
+  {
+    path: 'adapter',
+    loadChildren: () => import('./06. Adapter/adapter.module').then(m => m.AdapterModule) }
 ];
 
 @NgModule({

@@ -1,0 +1,59 @@
+<div class="container">
+  <h1>
+    Adapter
+  </h1>
+  <div class="content">
+    <mat-card>
+      <mat-card-title>
+        Cat
+      </mat-card-title>
+      <mat-card-subtitle>
+        It's only a cat
+      </mat-card-subtitle>
+      <mat-card-actions>
+        <button mat-raised-button (click)="btnCatSound()">Make sounds</button>
+      </mat-card-actions>
+      <mat-card-content>
+        <div *ngFor="let catSound of catSounds">
+          {{ catSound }}
+        </div>
+      </mat-card-content>
+
+    </mat-card>
+    <mat-card>
+      <mat-card-title>
+        Toy
+      </mat-card-title>
+      <mat-card-subtitle>
+        It's only a toy
+      </mat-card-subtitle>
+      <mat-card-actions>
+        <button mat-raised-button (click)="btnToySound()">Make sounds</button>
+      </mat-card-actions>
+      <mat-card-content>
+        <div *ngFor="let toySound of toySounds">
+          {{ toySound }}
+        </div>
+      </mat-card-content>
+
+    </mat-card>
+    <mat-card>
+      <mat-card-title>
+          ToyCat
+      </mat-card-title>
+      <mat-card-subtitle>
+          It's a toy, but imitates a cat :O
+      </mat-card-subtitle>
+      <mat-card-actions>
+        <button mat-raised-button (click)="btnCatAdapterSound()">Make sounds</button>
+      </mat-card-actions>
+      <mat-card-content>
+
+        <div *ngFor="let catAdapterSound of catAdapterSounds">
+          {{ catAdapterSound }}
+        </div>
+      </mat-card-content>
+
+    </mat-card>
+  </div>
+</div>

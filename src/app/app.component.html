@@ -1,1 +1,9 @@
-<router-outlet></router-outlet>
+<mat-toolbar >
+  <button mat-icon-button aria-label="Home icon" [routerLink]="['/home']">
+    <mat-icon>home</mat-icon>
+  </button>
+</mat-toolbar>
+<div class="app-container">
+  <router-outlet></router-outlet>
+</div>
+

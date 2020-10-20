@@ -23,7 +23,13 @@ const routes: Routes = [
     loadChildren: () => import('./05. Factory Method/factory-method.module').then(m => m.FactoryMethodModule) },
   {
     path: 'adapter',
-    loadChildren: () => import('./06. Adapter/adapter.module').then(m => m.AdapterModule) }
+    loadChildren: () => import('./06. Adapter/adapter.module').then(m => m.AdapterModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./xx. components/Home/home.module').then(m => m.HomeModule)
+  },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

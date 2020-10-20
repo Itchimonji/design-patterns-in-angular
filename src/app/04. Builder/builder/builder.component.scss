@@ -8,6 +8,11 @@ div.container {
   align-items: center;
 }
 
+div.content {
+  display: flex;
+  flex-direction: row;
+}
+
 mat-card {
   margin: 15px;
   max-width: 300px;

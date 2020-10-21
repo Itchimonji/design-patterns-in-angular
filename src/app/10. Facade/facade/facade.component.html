@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>
+    Facade Pattern
+  </h1>
+  <div class="content">
+    <mat-card>
+      <mat-card-title>
+        Coffee factory log
+      </mat-card-title>
+      <mat-card-actions>
+        <button mat-raised-button (click)="btnProduceCoffee()">Make coffee</button>
+      </mat-card-actions>
+      <mat-card-content>
+        <div *ngFor="let log of logProduction">
+          {{ log }}
+          <div>-------</div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

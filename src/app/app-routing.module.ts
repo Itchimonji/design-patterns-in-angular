@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'home',
+    loadChildren: () => import('./xx. components/Home/home.module').then(m => m.HomeModule)
+  },
+  {
     path: 'abstract-factory',
     loadChildren: () => import('./01. Abstract Factory/abstract-factory.module').then(m => m.AbstractFactoryModule)
   },
@@ -26,10 +30,14 @@ const routes: Routes = [
     loadChildren: () => import('./06. Adapter/adapter.module').then(m => m.AdapterModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('./xx. components/Home/home.module').then(m => m.HomeModule)
+    path: 'facade',
+    loadChildren: () => import('./10. Facade/facade.module').then(m => m.FacadeModule)
   },
-  { path: '',   redirectTo: '/home', pathMatch: 'full' }
+  {
+    path: '',
+    redirectTo: '/home', pathMatch: 'full'
+  }
+
 ];
 
 @NgModule({

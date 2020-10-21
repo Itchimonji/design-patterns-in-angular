@@ -1,5 +1,10 @@
+div.container {
+  display: flex;
+  flex-direction: row;
+}
 mat-card {
   text-align: center;
+  margin: 15px;
 }
 
 mat-card-content {

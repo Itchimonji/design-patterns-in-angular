@@ -36,6 +36,10 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: '/home', pathMatch: 'full'
+  },
+  {
+    path: 'decorator',
+    loadChildren: () => import('./09. Decorator/decorator.module').then(m => m.DecoratorModule)
   }
 
 ];

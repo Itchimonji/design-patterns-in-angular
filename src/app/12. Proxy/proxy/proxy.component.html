@@ -1,0 +1,44 @@
+
+<div class="container">
+  <h1>
+    Proxy Pattern
+  </h1>
+  <div class="content">
+    <mat-card>
+      <mat-card-title>
+        Connect to internet without proxy
+      </mat-card-title>
+      <mat-card-actions>
+        <button mat-raised-button (click)="btnConnectToRealInternet()" color="primary">Connect</button>
+      </mat-card-actions>
+      <mat-card-content>
+        <div>Visit site</div>
+
+      </mat-card-content>
+      <mat-card-footer>
+        <div *ngFor="let log of logsInternet">
+          {{log}}
+        </div>
+      </mat-card-footer>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>
+        Connect to internet with proxy
+      </mat-card-title>
+      <mat-card-actions>
+        <button mat-raised-button (click)="btnConnectToInternetWithProxy()" color="primary">Connect</button>
+      </mat-card-actions>
+      <mat-card-content>
+        <div>Visit site</div>
+
+      </mat-card-content>
+      <mat-card-footer>
+        <div *ngFor="let log of logsProxy">
+          {{log}}
+        </div>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+
+</div>

@@ -3,6 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
     path: 'home',
     loadChildren: () => import('./xx. components/Home/home.module').then(m => m.HomeModule)
   },
@@ -24,7 +29,8 @@ const routes: Routes = [
   },
   {
     path: 'factory-method',
-    loadChildren: () => import('./05. Factory Method/factory-method.module').then(m => m.FactoryMethodModule) },
+    loadChildren: () => import('./05. Factory Method/factory-method.module').then(m => m.FactoryMethodModule)
+  },
   {
     path: 'adapter',
     loadChildren: () => import('./06. Adapter/adapter.module').then(m => m.AdapterModule)
@@ -34,18 +40,17 @@ const routes: Routes = [
     loadChildren: () => import('./10. Facade/facade.module').then(m => m.FacadeModule)
   },
   {
-    path: '',
-    redirectTo: '/home', pathMatch: 'full'
-  },
-  {
     path: 'decorator',
     loadChildren: () => import('./09. Decorator/decorator.module').then(m => m.DecoratorModule)
+  },
+  {
+    path: 'proxy',
+    loadChildren: () => import('./12. Proxy/proxy.module').then(m => m.ProxyModule)
   }
-
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -10,7 +10,7 @@ export class RealInternet implements Internet {
   }
 
   public visitSite(site: string): boolean {
-    console.log('visit site `$site`');
+    console.log('visit site...');
     return true;
   }
 }
@@ -40,5 +40,9 @@ export class Proxy implements Internet {
   public visitSite(site: string): boolean {
     console.log('Try to visit a site...');
     return this.blackList.indexOf(site) === -1;
+  }
+
+  public getSites(): string[] {
+    return this.blackList;
   }
 }

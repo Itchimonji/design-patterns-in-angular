@@ -47,7 +47,8 @@ const routes: Routes = [
     path: 'proxy',
     loadChildren: () => import('./12. Proxy/proxy.module').then(m => m.ProxyModule)
   },
-  { path: 'composite', loadChildren: () => import('./08. Composite/composite.module').then(m => m.CompositeModule) }
+  { path: 'composite', loadChildren: () => import('./08. Composite/composite.module').then(m => m.CompositeModule) },
+  { path: 'bridge', loadChildren: () => import('./07. Bridge/bridge.module').then(m => m.BridgeModule) }
 ];
 
 @NgModule({

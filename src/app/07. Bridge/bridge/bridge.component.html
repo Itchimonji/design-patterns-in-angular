@@ -1,0 +1,47 @@
+<div class="container">
+  <h1>
+    Bridge Pattern
+  </h1>
+  <div class="content">
+    <mat-card>
+      <mat-card-title>TV</mat-card-title>
+      <mat-card-content>
+        <div>Power: {{tv.isEnabled()}}</div>
+        <div>Volume: {{tv.getVolume()}}</div>
+        <div>Channel: {{tv.getChannel()}}</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>Radio</mat-card-title>
+      <mat-card-content>
+        <div>Power: {{radio.isEnabled()}}</div>
+        <div>Volume: {{radio.getVolume()}}</div>
+        <div>Channel: {{radio.getChannel()}}</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="content">
+    <mat-card>
+      <mat-card-title>TV remote control</mat-card-title>
+      <mat-card-content>
+        <button mat-raised-button color="primary" (click)="btnTogglePower(remoteTV)">Power</button>
+        <button mat-raised-button color="primary" (click)="btnVolumeUp(remoteTV)">Volume Up</button>
+        <button mat-raised-button color="primary" (click)="btnVolumeDown(remoteTV)">Volume Down</button>
+        <button mat-raised-button color="primary" (click)="btnChannelUp(remoteTV)">Channel Up</button>
+        <button mat-raised-button color="primary" (click)="btnChannelDown(remoteTV)">Channel Down</button>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>Radio rem. control</mat-card-title>
+      <mat-card-content>
+        <button mat-raised-button color="primary" (click)="btnTogglePower(remoteRadio)">Power</button>
+        <button mat-raised-button color="primary" (click)="btnVolumeUp(remoteRadio)">Volume Up</button>
+        <button mat-raised-button color="primary" (click)="btnVolumeDown(remoteRadio)">Volume Down</button>
+        <button mat-raised-button color="primary" (click)="btnChannelUp(remoteRadio)">Channel Up</button>
+        <button mat-raised-button color="primary" (click)="btnChannelDown(remoteRadio)">Channel Down</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+

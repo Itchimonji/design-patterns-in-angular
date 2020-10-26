@@ -1,0 +1,24 @@
+div {
+  text-align: center;
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+mat-card {
+  margin: 15px;
+  max-width: 500px;
+}
+
+mat-button-toggle-group {
+  margin-bottom: 20px;
+}

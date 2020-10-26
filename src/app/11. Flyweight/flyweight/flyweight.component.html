@@ -1,0 +1,47 @@
+<div class="container">
+  <h1>
+    Flyweight Pattern
+  </h1>
+  <div class="content">
+    <mat-card>
+      <mat-card-title>
+        Select color & pen and draw your text
+      </mat-card-title>
+      <mat-card-content>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Color</mat-label>
+            <mat-select [(ngModel)]="selectedColor" name="color">
+              <mat-option value="red">red</mat-option>
+              <mat-option value="blue">blue</mat-option>
+              <mat-option value="green">green</mat-option>
+              <mat-option value="black">black</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-button-toggle-group>
+            <mat-button-toggle (click)="selectThickPen()">Thick pen</mat-button-toggle>
+            <mat-button-toggle (click)="selectMediumPen()">Medium pen</mat-button-toggle>
+            <mat-button-toggle (click)="selectThinPen()">Thin pen</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Clearable input</mat-label>
+            <input matInput type="text" [(ngModel)]="text">
+            <button mat-button *ngIf="text" matSuffix mat-icon-button aria-label="Clear" (click)="text = ''">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button (click)="btnDraw()">Draw</button>
+        </div>
+        <div *ngFor="let log of listLog">
+          {{ log }}
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

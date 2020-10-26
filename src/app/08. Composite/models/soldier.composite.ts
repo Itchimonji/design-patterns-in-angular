@@ -1,9 +1,7 @@
 /*
 * Resource: https://refactoring.guru/design-patterns/composite/typescript/example
-* Usually, the Composite objects delegate the actual work to their children and
-* then "sum-up" the result.
 */
-import {Soldier} from './soldier.model';
+import { Soldier } from './soldier.model';
 
 class SoldierComposite extends Soldier {
   protected children: Soldier[] = [];

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Soldier} from '../models/soldier.model';
 
 @Component({
   selector: 'app-composite',
@@ -10,6 +11,13 @@ export class CompositeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  private clientCode(tree: Soldier, leaf: Soldier): string {
+    if (tree.isComposite()) {
+      tree.add(leaf);
+    }
+    return tree.salute();
   }
 
 }

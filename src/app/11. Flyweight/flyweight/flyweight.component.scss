@@ -14,6 +14,7 @@ div.content {
   align-items: flex-start;
 }
 
+
 mat-card {
   margin: 15px;
   max-width: 500px;
@@ -21,4 +22,8 @@ mat-card {
 
 mat-button-toggle-group {
   margin-bottom: 20px;
+}
+
+button {
+  margin-bottom: 15px;
 }

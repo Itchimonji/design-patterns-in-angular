@@ -18,6 +18,12 @@ export class WordsCollection implements Aggregator {
     this.collectionItems.push(item);
   }
 
+  public removeItem(item: string): void {
+    const index: number = this.collectionItems.indexOf(item);
+    this.collectionItems.splice(index, 1);
+  }
+
+  // factory method
   public getIterator(): Iterator<string> {
     return new AlphabeticalOrderIterator(this);
   }

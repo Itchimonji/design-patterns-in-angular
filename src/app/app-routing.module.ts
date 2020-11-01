@@ -49,7 +49,9 @@ const routes: Routes = [
   },
   { path: 'composite', loadChildren: () => import('./08. Composite/composite.module').then(m => m.CompositeModule) },
   { path: 'bridge', loadChildren: () => import('./07. Bridge/bridge.module').then(m => m.BridgeModule) },
-  { path: 'flyweight', loadChildren: () => import('./11. Flyweight/flyweight.module').then(m => m.FlyweightModule) }
+  { path: 'flyweight', loadChildren: () => import('./11. Flyweight/flyweight.module').then(m => m.FlyweightModule) },
+  { path: 'mediator', loadChildren: () => import('./13. Mediator/mediator.module').then(m => m.MediatorModule) },
+  { path: 'iterator', loadChildren: () => import('./14. Iterator/iterator.module').then(m => m.IteratorModule) }
 ];
 
 @NgModule({

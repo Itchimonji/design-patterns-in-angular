@@ -11,6 +11,9 @@ import {Memento} from '../models/memento.model';
 })
 export class MementoComponent {
   public history: Memento[];
+  public title = '';
+  public description = '';
+  public color = '';
 
   private readonly orginator: Orginator;
   private readonly careTaker: CareTaker;
@@ -21,6 +24,7 @@ export class MementoComponent {
     this.currentCardState = new MatCard('Default title', 'Default description', 'white');
     this.orginator = new ConcreteOrginator(this.currentCardState);
     this.careTaker = new ConcreteCareTaker(this.orginator);
+    this.history = this.careTaker.history();
   }
 
   public btnChangeTitle(title: string): void {
@@ -36,9 +40,5 @@ export class MementoComponent {
   public btnChangeColor(color: string): void {
     this.careTaker.backUp();
     this.orginator.changeColor(color);
-  }
-
-  public fetchHistory(): void {
-    this.history = this.careTaker.history();
   }
 }

@@ -1,4 +1,4 @@
-import { Card } from './card.model';
+import {Card, MatCard} from './card.model';
 import { ConcreteMemento, Memento } from './memento.model';
 
 export interface Orginator {
@@ -31,7 +31,7 @@ export class ConcreteOrginator implements Orginator {
 
   /** create memento **/
   public saveState(): Memento {
-    return new ConcreteMemento(this.currentState);
+    return new ConcreteMemento(new MatCard(this.currentState.title, this.currentState.description, this.currentState.color));
   }
 
   /** set memento **/

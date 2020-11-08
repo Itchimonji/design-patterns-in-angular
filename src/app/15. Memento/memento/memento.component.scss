@@ -1,0 +1,17 @@
+mat-card {
+  max-width: 500px;
+}
+
+mat-card-content.mat-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+mat-form-field {
+  margin-right: 20px;
+}
+
+div.title-backups {
+  margin-top: 15px;
+}

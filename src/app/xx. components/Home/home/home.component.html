@@ -53,8 +53,14 @@
       Behavioral Patterns
     </mat-card-title>
     <mat-card-content>
+      <a mat-raised-button [routerLink]="['/mediator']" routerLinkActive="mediator" color="primary">
+        Mediator
+      </a>
       <a mat-raised-button [routerLink]="['/iterator']" routerLinkActive="iterator" color="primary">
         Iterator
+      </a>
+      <a mat-raised-button [routerLink]="['/memento']" routerLinkActive="memento" color="primary">
+        Memento
       </a>
     </mat-card-content>
   </mat-card>

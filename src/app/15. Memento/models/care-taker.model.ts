@@ -29,6 +29,7 @@ export class ConcreteCareTaker implements CareTaker {
   }
 
   public history(): Memento[] {
-    return { ...this.listMemento };
+    console.log(this.listMemento);
+    return this.listMemento;
   }
 }

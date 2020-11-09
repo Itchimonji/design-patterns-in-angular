@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>
+    Strategy Pattern
+  </h1>
+  <div class="content">
+    <mat-card>
+      <mat-card-content>
+        <h3>{{array}}</h3>
+        <mat-radio-group aria-label="Select an algorithm" [(ngModel)]="selectedAlgorithm">
+          <mat-radio-button *ngFor="let algo of listAlgorithm" [value]="algo">
+            {{ algo.name }}
+          </mat-radio-button>
+        </mat-radio-group>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="btnSort()">Sort</button>
+      </mat-card-actions>
+      <mat-card-content>
+        {{result}}
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

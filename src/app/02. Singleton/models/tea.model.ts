@@ -8,7 +8,7 @@ export interface AbstractTea {
 
 export class BlackTea implements AbstractTea {
   private static instance: BlackTea;
-  private id: number;
+  private readonly id: number;
   private type = 'Black Tea';
 
   private constructor() {
@@ -36,7 +36,7 @@ export class BlackTea implements AbstractTea {
 
 export class FruitTea implements AbstractTea {
   private static instance: FruitTea;
-  private id: number;
+  private readonly id: number;
   private type = 'Fruit Tea';
 
   private constructor() {

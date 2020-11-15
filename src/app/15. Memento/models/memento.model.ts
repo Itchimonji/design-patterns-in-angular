@@ -6,8 +6,8 @@ export interface Memento {
 }
 
 export class ConcreteMemento implements Memento {
-  private state: Card;
-  private date: string;
+  private readonly state: Card;
+  private readonly date: string;
 
   constructor(state: Card) {
     this.state = state;

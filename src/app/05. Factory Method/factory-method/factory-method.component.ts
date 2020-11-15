@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { clientCode } from '../models/client.utils';
-import { PizzaCreator, TackoCreator, WrapCreator} from '../models/creator.model';
+import { PizzaCreator, TackoCreator, WrapCreator } from '../models/creator.model';
 
 export class FoodPlanningHistory {
   index: number;
@@ -18,14 +18,13 @@ export class FoodPlanningHistory {
   styleUrls: ['./factory-method.component.scss']
 })
 export class FactoryMethodComponent {
-
   public foodPlanning: FoodPlanningHistory[];
 
   constructor() {
     this.foodPlanning = new Array<FoodPlanningHistory>();
   }
 
-  public trackByFn(index, item: FoodPlanningHistory) {
+  public trackByFn(index, item: FoodPlanningHistory): number {
     return item.index;
   }
 

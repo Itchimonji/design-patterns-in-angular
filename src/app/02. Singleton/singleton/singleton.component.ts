@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BlackTea, FruitTea } from '../models/tea.model';
+import { AbstractTea, BlackTea, FruitTea } from '../models/tea.model';
 
 @Component({
   selector: 'app-singleton',
@@ -7,9 +7,8 @@ import { BlackTea, FruitTea } from '../models/tea.model';
   styleUrls: ['./singleton.component.scss']
 })
 export class SingletonComponent {
-
-  public blackTea: BlackTea;
-  public fruitTea: FruitTea;
+  public blackTea: AbstractTea;
+  public fruitTea: AbstractTea;
 
   constructor() {
     this.blackTea = BlackTea.getInstance();

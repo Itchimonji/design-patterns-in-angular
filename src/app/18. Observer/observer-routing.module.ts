@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ObserverComponent } from './observer.component';
+import { ObserverComponent } from './observer/observer.component';
 
 const routes: Routes = [{ path: '', component: ObserverComponent }];
 

@@ -1,0 +1,23 @@
+mat-card {
+  width: 400px;
+  max-width: 400px;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  div {
+    width: 180px;
+    border: solid 1px grey;
+
+    div {
+      border: 0;
+    }
+  }
+
+  div:first-of-type {
+    margin-right: 15px;
+  }
+}

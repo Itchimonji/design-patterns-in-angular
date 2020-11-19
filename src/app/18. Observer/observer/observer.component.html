@@ -1,1 +1,27 @@
-<p>observer works!</p>
+<div class="container">
+  <h1>
+    Observer Pattern
+  </h1>
+  <div class="content">
+    <mat-card>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="btnGenerateRandomNumber()">Random number</button>
+      </mat-card-actions>
+      <mat-card-content>
+        <div>
+          <h3>Channel A</h3>
+          <div *ngFor="let message of messageChannelA">
+            {{ message }}
+          </div>
+        </div>
+        <div>
+          <h3>Channel B</h3>
+          <div *ngFor="let message of messageChannelB">
+            {{ message }}
+          </div>
+        </div>
+      </mat-card-content>
+
+    </mat-card>
+  </div>
+</div>

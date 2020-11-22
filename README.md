@@ -16,7 +16,7 @@
 
 ![Abstract Factory](./readme/images/01.%20Abstract%20Factory.jpg)
 
-##### UML for this repo example
+##### UML: example of this repo
 
 ![Abstract Factory Example](./readme/images/01.%20Abstract%20Factory%20example.jpg)
 
@@ -29,7 +29,7 @@
 
 ![Singleton](./readme/images/02.%20Singleton.jpg)
 
-##### UML for this repo example
+##### UML: example of this repo
 
 ![Singleton Example](./readme/images/02.%20Singleton%20example.jpg)
 
@@ -44,7 +44,7 @@
 
 ![Prototype](./readme/images/03.%20Prototype.jpg)
 
-##### UML for this repo example
+##### UML: example of this repo
 
 ![Prototype Example](./readme/images/03.%20Prototype%20example.jpg)
 
@@ -58,7 +58,7 @@
 
 ![Builder](./readme/images/04.%20Builder.jpg)
 
-##### UML for this repo example
+##### UML: example of this repo
 
 ![Example](./readme/images/04.%20Builder%20example.jpg)
 
@@ -72,7 +72,7 @@
 
 ![Factory Method](./readme/images/05.%20Factory%20Method.jpg)
 
-##### UML for this repo example
+##### UML: example of this repo
 
 ![Factory Method Example](./readme/images/05.%20Factory%20Method%20example.jpg)
 
@@ -81,6 +81,14 @@
 - short description: allows objects with incompatible interfaces to collaborate
 - visual resource: https://refactoring.guru/design-patterns/adapter
 - expandability: 2-way-adapter for aptee and target (multiple inheritance)
+
+##### UML
+
+![Adapter](./readme/images/06.%20Adapter.jpg)
+
+##### UML: example of this repo
+
+![Adapter Example](./readme/images/06.%20Adapter%20example.jpg)
 
 ### Facade
 
@@ -92,10 +100,17 @@
 - short description: separate the abstraction from the implementation
 - visual resource: https://refactoring.guru/design-patterns/bridge
 
+##### UML
+
+![Bridge](./readme/images/07.%20Bridge.jpg)
+
+##### UML: example of this repo
+
+![Bridge Example](./readme/images/07.%20Bridge%20example.jpg)
 
 ## Resources
 
-- Design Pattern by GoF
+- Design Patterns by GoF
 - https://refactoring.guru/
 - https://www.geeksforgeeks.org/
 

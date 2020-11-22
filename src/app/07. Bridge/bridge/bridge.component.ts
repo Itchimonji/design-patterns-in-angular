@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Radio, TV} from '../models/device.model';
-import {AdvancedRemoteControl, RemoteControl} from '../models/remote.model';
+import {Device, Radio, TV} from '../models/device.model';
+import {Abstraction, AdvancedRemoteControl, RefinedAbstraction, RemoteControl} from '../models/remote.model';
 
 @Component({
   selector: 'app-bridge',
@@ -11,10 +11,10 @@ export class BridgeComponent {
 
   // inspired by https://refactoring.guru/design-patterns/bridge
 
-  public tv: TV;
-  public remoteTV: RemoteControl;
-  public radio: Radio;
-  public remoteRadio: RemoteControl;
+  public tv: Device;
+  public radio: Device;
+  public remoteTV: Abstraction;
+  public remoteRadio: RefinedAbstraction;
 
   constructor() {
     this.tv = new TV();
@@ -23,27 +23,27 @@ export class BridgeComponent {
     this.remoteRadio = new AdvancedRemoteControl(this.radio);
   }
 
-  public btnTogglePower(remote: RemoteControl) {
+  public btnTogglePower(remote: Abstraction) {
     remote.togglePower();
   }
 
-  public btnVolumeDown(remote: RemoteControl) {
+  public btnVolumeDown(remote: Abstraction) {
     remote.volumeDown();
   }
 
-  public btnVolumeUp(remote: RemoteControl) {
+  public btnVolumeUp(remote: Abstraction) {
     remote.volumeUp();
   }
 
-  public btnChannelDown(remote: RemoteControl) {
+  public btnChannelDown(remote: Abstraction) {
     remote.channelDown();
   }
 
-  public btnChannelUp(remote: RemoteControl) {
+  public btnChannelUp(remote: Abstraction) {
     remote.channelUp();
   }
 
-  public btnMute(advancedRemoteControl: AdvancedRemoteControl) {
+  public btnMute(advancedRemoteControl: RefinedAbstraction) {
     advancedRemoteControl.mute();
   }
 }

@@ -1,7 +1,19 @@
-import {Device} from './device.model';
+import { Device } from './device.model';
+
+export interface Abstraction {
+  togglePower(): boolean;
+  volumeDown(): number;
+  volumeUp(): number;
+  channelDown(): number;
+  channelUp(): number;
+}
+
+export interface RefinedAbstraction extends Abstraction{
+  mute(): number;
+}
 
 // Abstraction
-export class RemoteControl {
+export class RemoteControl implements Abstraction {
   protected device: Device;
 
   constructor(device: Device) {
@@ -33,7 +45,7 @@ export class RemoteControl {
   }
 }
 
-export class AdvancedRemoteControl extends RemoteControl {
+export class AdvancedRemoteControl extends RemoteControl implements RefinedAbstraction {
   constructor(device: Device) {
     super(device);
   }

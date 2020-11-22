@@ -1,5 +1,6 @@
 import { Observer, Subject } from './interfaces';
 
+// concrete subject
 export class ChannelServer implements Subject {
   public state: number;
   private observers: Observer[] = [];

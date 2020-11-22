@@ -1,4 +1,4 @@
-// Bridge
+// Bridge - Implementor
 export interface Device {
   isEnabled(): boolean;
   enable(): boolean;
@@ -9,7 +9,7 @@ export interface Device {
   setChannel(channel: number): number;
 }
 
-// Implementation A
+// concrete Implementator A
 export class Radio implements Device {
 
   private enabled: boolean;
@@ -55,7 +55,7 @@ export class Radio implements Device {
   }
 }
 
-// Implementation B
+// concrete Implementator B
 export class TV implements Device {
 
   private enabled: boolean;

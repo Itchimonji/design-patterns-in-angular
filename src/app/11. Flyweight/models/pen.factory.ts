@@ -1,4 +1,4 @@
-import {MediumPen, Pen, ThickPen, ThinPen} from './pen.model';
+import { MediumPen, Pen, ThickPen, ThinPen } from './pen.model';
 
 interface IHash {
   [details: string]: Pen;

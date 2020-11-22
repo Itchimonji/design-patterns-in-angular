@@ -3,7 +3,7 @@
 - Run `ng serve` for a dev server. Navigate to `http://localhost:4201/`
 - Run `ng generate module singleton --route singleton --module app.module` to create a feature module with routing
 
-## Creational Pattern
+## Creational Patterns
 
 ### Abstract Factory
 
@@ -33,7 +33,7 @@
 
 ![Singleton Example](./readme/images/02.%20Singleton%20example.jpg)
 
-### Prototype
+### Prototype (Clone)
 
 - short description: clone/copy a component 
 - applicability: runtime specification of objects (dynamic loading), to many different objects for factories
@@ -62,7 +62,7 @@
 
 ![Example](./readme/images/04.%20Builder%20example.jpg)
 
-### Factory Method
+### Factory Method (Virtual Constructor)
 
 - short description: provide an interface for creating objects in superclass
 - visual resource: https://refactoring.guru/design-patterns/factory-method
@@ -75,6 +75,8 @@
 ##### UML: example of this repo
 
 ![Factory Method Example](./readme/images/05.%20Factory%20Method%20example.jpg)
+
+## Structural Patterns
 
 ### Adapter (Wrapper)
 
@@ -103,12 +105,12 @@
 
 ![Bridge Example](./readme/images/07.%20Bridge%20example.jpg)
 
-### Composite
+### Composite (Object Tree)
 
 - short description: compose objects into tree structures
 - visual resource: https://refactoring.guru/design-patterns/composite
 
-### Decorator
+### Decorator (Wrapper)
 
 - short description: attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors
 - visual resource: https://refactoring.guru/design-patterns/decorator
@@ -134,12 +136,20 @@
 
 ![Facade Example](./readme/images/10.%20Facade%20example.jpg)
 
-### Flyweight
+### Flyweight (Cache)
 
 - short description: sharing common parts of state between multiple objects instead of keeping all of the data in each object
 - visual resource: https://refactoring.guru/design-patterns/flyweight
 
-# Proxy
+##### UML
+
+![Flyweight](./readme/images/11.%20Flyweight.jpg)
+
+##### UML: example of this repo
+
+![Flyweight Example](./readme/images/11.%20Flyweight%20example.jpg)
+
+### Proxy
 
 - short description: controls access to the original object
 - visual resource: https://refactoring.guru/design-patterns/proxy

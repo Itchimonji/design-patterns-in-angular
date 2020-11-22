@@ -1,6 +1,6 @@
 <div class="container">
   <h1>
-    Flyweight Pattern
+    Flyweight Pattern (Cache)
   </h1>
   <div class="content">
     <mat-card>
@@ -11,7 +11,7 @@
         <div>
           <mat-form-field appearance="fill">
             <mat-label>Color</mat-label>
-            <mat-select [(ngModel)]="selectedColor" name="color">
+            <mat-select [(ngModel)]="selectedColor" name="color" (selectionChange)="selectColor()">
               <mat-option value="red">red</mat-option>
               <mat-option value="blue">blue</mat-option>
               <mat-option value="green">green</mat-option>

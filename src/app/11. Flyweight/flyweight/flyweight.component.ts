@@ -21,19 +21,23 @@ export class FlyweightComponent {
     this.listLog = new Array<string>();
   }
 
-  public selectThickPen() {
+  public selectThickPen(): void {
     this.selectedPen = PenFactory.getThickPen(this.selectedColor);
   }
 
-  public selectThinPen() {
+  public selectThinPen(): void {
     this.selectedPen = PenFactory.getThinPen(this.selectedColor);
   }
 
-  public selectMediumPen() {
+  public selectMediumPen(): void {
     this.selectedPen = PenFactory.getMediumPen(this.selectedColor);
   }
 
-  public btnDraw() {
+  public selectColor(): void {
+    this.selectedPen?.setColor(this.selectedColor);
+  }
+
+  public btnDraw(): void {
     const hashCode: string | Int32Array = Md5.hashStr(JSON.stringify(this.selectedPen));
     this.listLog.push('Hash code of pen: ' + hashCode.toString());
     this.listLog.push(this.selectedPen?.draw(this.text));

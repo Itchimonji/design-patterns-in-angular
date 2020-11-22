@@ -5,9 +5,14 @@
   </h1>
   <div class="content">
     <mat-card>
-      <mat-card-title>
-        Connect to internet without proxy
-      </mat-card-title>
+      <mat-card-header>
+        <mat-card-title>
+          Connect to internet w/o proxy
+        </mat-card-title>
+        <mat-card-subtitle>
+          Standard connection
+        </mat-card-subtitle>
+      </mat-card-header>
       <mat-card-actions>
         <button mat-raised-button (click)="btnConnectToRealInternet()" color="primary">Connect</button>
       </mat-card-actions>
@@ -31,10 +36,17 @@
     </mat-card>
 
     <mat-card>
-      <mat-card-title>
-        Connect to internet with proxy
-      </mat-card-title>
+      <mat-card-header>
+        <mat-card-title>
+          Connect to internet with proxy
+        </mat-card-title>
+        <mat-card-subtitle>
+          Before use you need to reset the internet
+        </mat-card-subtitle>
+      </mat-card-header>
+
       <mat-card-actions>
+        <button mat-raised-button (click)="btnReset()" color="primary">Reset</button>
         <button mat-raised-button (click)="btnAuthenticate()" color="primary">Authenticate</button>
         <button mat-raised-button (click)="btnConnectToInternetWithProxy()" color="primary">Connect</button>
       </mat-card-actions>

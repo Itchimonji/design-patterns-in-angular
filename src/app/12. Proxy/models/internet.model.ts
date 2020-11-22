@@ -4,18 +4,26 @@ export interface Internet {
 }
 
 export class RealInternet implements Internet {
+  private isConnected = false;
+
   public connect(): boolean {
     console.log('connect to the internet...');
+    this.isConnected = true;
     return true;
   }
 
   public visitSite(site: string): boolean {
-    console.log('visit site...');
-    return true;
+    console.log('visit site:', site);
+    return this.isConnected;
   }
 }
 
-export class Proxy implements Internet {
+export interface ProxyInternet extends Internet {
+  authenticate(password: string): boolean;
+  getBlacklistSites(): string[];
+}
+
+export class Proxy implements ProxyInternet {
   readonly password: string = 'top-secret';
   readonly blackList: string[] = ['www.123.com', 'www.abc.com', 'www.you-can-not-pass.com'];
 
@@ -34,15 +42,20 @@ export class Proxy implements Internet {
 
   public connect(): boolean {
     console.log('Try to connect to the internet...');
-    return this.isAuthenticated;
+    if (!this.isAuthenticated) {
+      return false;
+    }
+    return this.internet.connect();
   }
 
   public visitSite(site: string): boolean {
-    console.log('Try to visit a site...');
+    if (!this.isAuthenticated || !this.internet.visitSite(site)) {
+      return this.internet.visitSite(site);
+    }
     return this.blackList.indexOf(site) === -1;
   }
 
-  public getSites(): string[] {
+  public getBlacklistSites(): string[] {
     return this.blackList;
   }
 }

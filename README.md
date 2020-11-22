@@ -144,6 +144,14 @@
 - short description: controls access to the original object
 - visual resource: https://refactoring.guru/design-patterns/proxy
 
+##### UML
+
+![Proxy](./readme/images/12.%20Proxy.jpg)
+
+##### UML: example of this repo
+
+![Proxy Example](./readme/images/12.%20Proxy%20example.jpg)
+
 ## Resources
 
 - Design Patterns by GoF

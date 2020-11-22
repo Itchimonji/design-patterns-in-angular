@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { RealInternet, Proxy } from '../models/internet.model';
+import { Component } from '@angular/core';
+import { RealInternet, Proxy, Internet, ProxyInternet } from '../models/internet.model';
 
 @Component({
   selector: 'app-proxy',
@@ -12,16 +12,20 @@ export class ProxyComponent {
   public selectedSite: string;
   public listSites: string[];
 
-  private internet: RealInternet;
-  private proxy: Proxy;
+  private internet: Internet;
+  private proxy: ProxyInternet;
   private whiteList = ['www.mc-paper.com', 'www.abra.com', 'www.kadabra.com'];
 
   constructor() {
     this.logsInternet = new Array<string>();
     this.logsProxy = new Array<string>();
+    this.init();
+  }
+
+  private init() {
     this.internet = new RealInternet();
     this.proxy = new Proxy(this.internet);
-    this.listSites = [...this.proxy.getSites(), ...this.whiteList];
+    this.listSites = [...this.proxy.getBlacklistSites(), ...this.whiteList];
   }
 
   public btnConnectToRealInternet(): void {
@@ -44,7 +48,12 @@ export class ProxyComponent {
     this.logsProxy.push('visit "' + this.selectedSite + '" : ' + success.toString());
   }
 
-  public btnAuthenticate() {
-    this.proxy.authenticate('top-secret');
+  public btnReset(): void {
+    this.init();
+  }
+
+  public btnAuthenticate(): void {
+    const isAuthenticated: boolean = this.proxy.authenticate('top-secret');
+    this.logsProxy.push('Is authenticated:  ' + isAuthenticated.toString());
   }
 }

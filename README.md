@@ -108,6 +108,19 @@
 - short description: compose objects into tree structures
 - visual resource: https://refactoring.guru/design-patterns/composite
 
+### Decorator
+
+- short description: attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors
+- visual resource: https://refactoring.guru/design-patterns/decorator
+
+##### UML
+
+![Decorator](./readme/images/09.%20Decorator.jpg)
+
+##### UML: example of this repo
+
+![Decorator Example](./readme/images/09.%20Decorator%20example.jpg)
+
 ### Facade
 
 - short description: provides a simplified interface to a library
@@ -120,6 +133,16 @@
 ##### UML: example of this repo
 
 ![Facade Example](./readme/images/10.%20Facade%20example.jpg)
+
+### Flyweight
+
+- short description: sharing common parts of state between multiple objects instead of keeping all of the data in each object
+- visual resource: https://refactoring.guru/design-patterns/flyweight
+
+# Proxy
+
+- short description: controls access to the original object
+- visual resource: https://refactoring.guru/design-patterns/proxy
 
 ## Resources
 

@@ -2,23 +2,12 @@ button {
   margin-top: 5px !important;
 }
 
-div {
-  text-align: center;
-}
-
-div.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-div.content {
-  display: flex;
-  flex-direction: row;
-}
-
 label {
   margin-bottom: 15px;
+}
+
+mat-card {
+  max-width: 400px;
 }
 
 mat-card-content {

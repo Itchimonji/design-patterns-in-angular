@@ -1,7 +1,7 @@
 import { Pizza } from './pizza.model';
 
 export class ExtraCheeseToppingDecorator implements Pizza {
-  readonly priceCheese: number = 1.3;
+  protected readonly priceCheese: number = 1.3;
   protected pizza: Pizza;
 
   constructor(pizzaToDecorate: Pizza) {
@@ -18,7 +18,7 @@ export class ExtraCheeseToppingDecorator implements Pizza {
 }
 
 export class MushroomToppingDecorator implements Pizza {
-  readonly priceMushrooms: number = 0.9;
+  protected readonly priceMushrooms: number = 0.9;
   protected pizza: Pizza;
 
   constructor(pizzaToDecorate: Pizza) {
@@ -35,7 +35,7 @@ export class MushroomToppingDecorator implements Pizza {
 }
 
 export class JalapenoToppingDecorator implements Pizza {
-  readonly priceJalapeno: number = 1.5;
+  protected readonly priceJalapeno: number = 1.5;
   protected pizza: Pizza;
 
   constructor(pizzaToDecorate: Pizza) {

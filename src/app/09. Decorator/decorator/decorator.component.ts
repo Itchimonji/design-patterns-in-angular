@@ -5,6 +5,7 @@ import {
   JalapenoToppingDecorator,
   MushroomToppingDecorator
 } from '../models/topping.decorator';
+import {ExtraExtraCheeseToppingDecorator, HotJalapenoToppingDecorator} from '../models/extend-topping.decorator';
 
 @Component({
   selector: 'app-decorator',
@@ -24,6 +25,8 @@ export class DecoratorComponent {
     this.initPizzas();
   }
 
+  // normal toppings
+
   public btnCheese(): void {
     const decorator = new ExtraCheeseToppingDecorator(this.pizza);
     this.logOrder(decorator);
@@ -39,6 +42,8 @@ export class DecoratorComponent {
     this.logOrder(decorator);
   }
 
+  // composition toppings
+
   public btnCheeseAndJalapeno(): void {
     const cheeseDecorator = new ExtraCheeseToppingDecorator(this.pizza);
     const cheeseAndJalapenoDecorator = new JalapenoToppingDecorator(cheeseDecorator);
@@ -49,6 +54,18 @@ export class DecoratorComponent {
     const cheeseDecorator = new ExtraCheeseToppingDecorator(this.pizza);
     const cheeseAndMushroomDecorator = new MushroomToppingDecorator(cheeseDecorator);
     this.logOrder(cheeseAndMushroomDecorator);
+  }
+
+  // inherited toppings
+
+  public btnExtraCheese(): void {
+    const decorator = new ExtraExtraCheeseToppingDecorator(this.pizza);
+    this.logOrder(decorator);
+  }
+
+  public btnHotJalapeno(): void {
+    const decorator = new HotJalapenoToppingDecorator(this.pizza);
+    this.logOrder(decorator);
   }
 
   private logOrder(decorator: Pizza) {

@@ -90,11 +90,6 @@
 
 ![Adapter Example](./readme/images/06.%20Adapter%20example.jpg)
 
-### Facade
-
-- short description: provides a simplified interface to a library
-- visual resource: https://refactoring.guru/design-patterns/facade
-
 ### Bridge
 
 - short description: separate the abstraction from the implementation
@@ -107,6 +102,24 @@
 ##### UML: example of this repo
 
 ![Bridge Example](./readme/images/07.%20Bridge%20example.jpg)
+
+### Composite
+
+- short description: compose objects into tree structures
+- visual resource: https://refactoring.guru/design-patterns/composite
+
+### Facade
+
+- short description: provides a simplified interface to a library
+- visual resource: https://refactoring.guru/design-patterns/facade
+
+##### UML
+
+![Facade](./readme/images/10.%20Facade.jpg)
+
+##### UML: example of this repo
+
+![Facade Example](./readme/images/10.%20Facade%20example.jpg)
 
 ## Resources
 

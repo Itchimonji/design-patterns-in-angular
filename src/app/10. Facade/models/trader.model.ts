@@ -3,7 +3,7 @@ export interface Trader {
 }
 
 export class CoffeeTrader implements Trader {
-  public getCoffee() {
+  public getCoffee(): string {
     return 'get coffee from Brazil..';
   }
 }

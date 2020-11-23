@@ -1,10 +1,11 @@
-/*
-* Resource: https://refactoring.guru/design-patterns/composite/typescript/example
-*/
 import { Soldier } from './soldier.model';
 
-class SoldierLeaf extends Soldier {
+// Leaf
+export class SoldierLeaf extends Soldier {
+  constructor(name: string) {
+    super(name);
+  }
   public salute(): string {
-    return 'Salute!';
+    return this.name + ' salutes..!';
   }
 }

@@ -1,10 +1,12 @@
-/*
-* Resource: https://refactoring.guru/design-patterns/composite/typescript/example
-*/
 import { Soldier } from './soldier.model';
 
-class SoldierComposite extends Soldier {
+// Composite
+export class SoldierComposite extends Soldier {
   protected children: Soldier[] = [];
+
+  constructor(name: string) {
+    super(name);
+  }
 
   public add(component: Soldier): void {
     this.children.push(component);
@@ -22,11 +24,14 @@ class SoldierComposite extends Soldier {
   }
 
   public salute(): string {
-    const results = [];
+    const results: string[] = [];
+
+    results.push('>>>' + this.name + ' arrives <<<');
+
     for (const child of this.children) {
       results.push(child.salute());
     }
 
-    return `OrderTo(${results.join('+')})`;
+    return results.join(' | \n');
   }
 }

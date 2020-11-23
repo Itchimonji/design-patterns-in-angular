@@ -4,6 +4,6 @@ export interface Drink {
 
 export class Coffee implements Drink {
   public cook(): string {
-    return 'cook coffee...';
+    return '[Drink]: cook coffee...';
   }
 }

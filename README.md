@@ -110,6 +110,16 @@
 - short description: compose objects into tree structures
 - visual resource: https://refactoring.guru/design-patterns/composite
 
+##### UML
+
+![Composite](./readme/images/08.%20Composite.jpg)
+
+##### UML: example of this repo
+
+![Composite Example](./readme/images/08.%20Composite%20example.jpg)
+
+### Composite (Object Tree)
+
 ### Decorator (Wrapper)
 
 - short description: attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors

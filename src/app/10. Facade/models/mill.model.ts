@@ -4,6 +4,6 @@ export interface Mill {
 
 export class CoffeeMill implements Mill {
   public grindCoffee(): string {
-    return 'grind coffee...';
+    return '[Mill]: grind coffee... ';
   }
 }

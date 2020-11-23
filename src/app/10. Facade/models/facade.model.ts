@@ -1,6 +1,6 @@
-import {CoffeeTrader, Trader} from "./trader.model";
-import {CoffeeMill, Mill} from "./mill.model";
-import {Coffee, Drink} from "./drink.model";
+import { CoffeeTrader, Trader } from "./trader.model";
+import { CoffeeMill, Mill } from "./mill.model";
+import { Coffee, Drink } from "./drink.model";
 
 export interface Facade {
   produce(): string;
@@ -20,7 +20,7 @@ export class CoffeeFacade implements Facade {
   }
 
   public produce(): string {
-    let result = 'Start producing coffee...';
+    let result = '[Facade]: We need to produce coffee: ';
     result += this.trader.getCoffee();
     result += this.mill.grindCoffee();
     result += this.drink.cook();

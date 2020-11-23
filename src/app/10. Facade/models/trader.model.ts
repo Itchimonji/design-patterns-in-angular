@@ -4,6 +4,6 @@ export interface Trader {
 
 export class CoffeeTrader implements Trader {
   public getCoffee(): string {
-    return 'get coffee from Brazil..';
+    return '[Trader]: get coffee from Brazil.. ';
   }
 }

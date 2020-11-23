@@ -10,22 +10,6 @@ div {
   text-align: center;
 }
 
-div.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-div.content {
-  display: flex;
-  flex-direction: row;
-}
-
-mat-card {
-  margin: 15px;
-  max-width: 300px;
-}
-
 mat-card-content {
   display: flex;
   flex-direction: column;

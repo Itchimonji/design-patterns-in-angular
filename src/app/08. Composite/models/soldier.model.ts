@@ -1,7 +1,13 @@
+// Component
 export abstract class Soldier {
   protected parent: Soldier;
+  protected name: string;
 
-  public setParent(parent: Soldier) {
+  protected constructor(name: string) {
+    this.name = name;
+  }
+
+  public setParent(parent: Soldier): void {
     this.parent = parent;
   }
 
@@ -9,9 +15,13 @@ export abstract class Soldier {
     return this.parent;
   }
 
-  public add(soldier: Soldier): void { }
+  public add(soldier: Soldier): void {
+    // beneficial to define the child-management operations
+  }
 
-  public remove(soldier: Soldier): void { }
+  public remove(soldier: Soldier): void {
+    // beneficial to define the child-management operations
+  }
 
   public isComposite(): boolean {
     return false;

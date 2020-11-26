@@ -73,7 +73,8 @@ const routes: Routes = [
     loadChildren: () => import('./16. Strategy/strategy.module').then(m => m.StrategyModule)
   },
   { path: 'command', loadChildren: () => import('./17. Command/command.module').then(m => m.CommandModule) },
-  { path: 'observer', loadChildren: () => import('./18. Observer/observer.module').then(m => m.ObserverModule) }
+  { path: 'observer', loadChildren: () => import('./18. Observer/observer.module').then(m => m.ObserverModule) },
+  { path: 'visitor', loadChildren: () => import('./19. Visitor/visitor.module').then(m => m.VisitorModule) }
 ];
 
 @NgModule({

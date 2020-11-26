@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>
+    Visitor Pattern
+  </h1>
+  <div class="content">
+    <mat-card>
+      <mat-card-title>
+        Fruits
+      </mat-card-title>
+      <mat-card-content>
+        <div class="fruits">
+          <mat-card class="fruit" *ngFor="let fruit of listFruit">
+            <div>id: {{ fruit.id }}</div>
+            <div>name: {{ fruit.name }}</div>
+            <div>color: {{ fruit.color }}</div>
+            <div>size: {{ getSize(fruit.size) }}</div>
+            <div>type: {{ fruit.type }}</div>
+          </mat-card>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="btnPartition()">Partition</button>
+      </mat-card-actions>
+      <mat-card-content>
+        <div *ngFor="let msg of log">
+          {{msg}}
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

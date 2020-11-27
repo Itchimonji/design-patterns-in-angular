@@ -118,8 +118,6 @@
 
 ![Composite Example](./readme/images/08.%20Composite%20example.jpg)
 
-### Composite (Object Tree)
-
 ### Decorator (Wrapper)
 
 - short description: attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors

@@ -51,15 +51,9 @@ const routes: Routes = [
     path: 'composite',
     loadChildren: () => import('./08. Composite/composite.module').then(m => m.CompositeModule)
   },
-  { path: 'bridge',
-    loadChildren: () => import('./07. Bridge/bridge.module').then(m => m.BridgeModule)
-  },
-  { path: 'flyweight',
-    loadChildren: () => import('./11. Flyweight/flyweight.module').then(m => m.FlyweightModule)
-  },
-  { path: 'mediator',
-    loadChildren: () => import('./13. Mediator/mediator.module').then(m => m.MediatorModule)
-  },
+  { path: 'bridge', loadChildren: () => import('./07. Bridge/bridge.module').then(m => m.BridgeModule) },
+  { path: 'flyweight', loadChildren: () => import('./11. Flyweight/flyweight.module').then(m => m.FlyweightModule) },
+  { path: 'mediator', loadChildren: () => import('./13. Mediator/mediator.module').then(m => m.MediatorModule) },
   {
     path: 'iterator',
     loadChildren: () => import('./14. Iterator/iterator.module').then(m => m.IteratorModule)
@@ -72,10 +66,26 @@ const routes: Routes = [
     path: 'strategy',
     loadChildren: () => import('./16. Strategy/strategy.module').then(m => m.StrategyModule)
   },
-  { path: 'command', loadChildren: () => import('./17. Command/command.module').then(m => m.CommandModule) },
-  { path: 'observer', loadChildren: () => import('./18. Observer/observer.module').then(m => m.ObserverModule) },
-  { path: 'visitor', loadChildren: () => import('./19. Visitor/visitor.module').then(m => m.VisitorModule) },
-  { path: 'state', loadChildren: () => import('./20. State/state.module').then(m => m.StateModule) }
+  {
+    path: 'command',
+    loadChildren: () => import('./17. Command/command.module').then(m => m.CommandModule)
+  },
+  {
+    path: 'observer',
+    loadChildren: () => import('./18. Observer/observer.module').then(m => m.ObserverModule)
+  },
+  {
+    path: 'visitor',
+    loadChildren: () => import('./19. Visitor/visitor.module').then(m => m.VisitorModule)
+  },
+  {
+    path: 'state',
+    loadChildren: () => import('./20. State/state.module').then(m => m.StateModule)
+  },
+  {
+    path: 'template-method',
+    loadChildren: () => import('./21. Template Method/template-method.module').then(m => m.TemplateMethodModule)
+  }
 ];
 
 @NgModule({

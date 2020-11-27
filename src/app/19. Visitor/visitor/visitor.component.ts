@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Fruit } from '../models/fruit.interface';
 import { FruitFactory } from '../models/fruit.factory';
-import {FruitPartitioner, FruitVisitor} from '../models/fruit.visitor';
+import { FruitPartitioner, FruitVisitor } from '../models/fruit.visitor';
 import { Size } from '../models/size.enum';
 
 @Component({
@@ -10,7 +10,6 @@ import { Size } from '../models/size.enum';
   styleUrls: ['./visitor.component.scss']
 })
 export class VisitorComponent {
-
   // https://stackoverflow.com/questions/2604169/visitor-patterns-purpose-with-examples
 
   public size = Size;
@@ -25,7 +24,7 @@ export class VisitorComponent {
   public log: string[] = [];
 
   constructor() {
-    this._listFruit = (new FruitFactory()).getFruits();
+    this._listFruit = new FruitFactory().getFruits();
     this.fruitPartitioner = new FruitPartitioner();
   }
 
@@ -35,7 +34,10 @@ export class VisitorComponent {
 
   btnPartition(): void {
     console.log(this.listFruit);
+    // best practise: iterator pattern for foreach-loops
     this.listFruit.forEach((fruit: Fruit) => {
+      // calls the accept method of the concrete object, e.g. Orange.accept
+      // in this example, orange's accept method is called 5 times > so, length = 5
       fruit.accept(this.fruitPartitioner);
     });
 

@@ -5,11 +5,19 @@
   <div class="content">
     <mat-card>
       <mat-card-actions>
-        <button [disabled]="mobilePhone." mat-raised-button color="primary" (click)="btnLockScreen()">Lock screen</button>
-        <button mat-raised-button color="primary" (click)="btnUnlockScreen()">Unlock screen</button>
+        <button [disabled]="state.name === 'LockedScreen'" mat-raised-button color="primary" (click)="btnLockScreen()">Lock screen</button>
+        <button [disabled]="state.name === 'UnLockedScreen'" mat-raised-button color="primary" (click)="btnUnlockScreen()">Unlock screen</button>
       </mat-card-actions>
+      <mat-card-header>
+        <mat-card-title>
+          Current screen state
+        </mat-card-title>
+        <mat-card-subtitle>
+          If you lock the screen to often, the battery get low
+        </mat-card-subtitle>
+      </mat-card-header>
       <mat-card-content>
-
+        {{ state.name }}
       </mat-card-content>
     </mat-card>
   </div>

@@ -1,0 +1,19 @@
+mat-card-header.mat-card-header {
+  justify-content: center;
+}
+
+mat-card-content.gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  div {
+    text-align: left;
+  }
+}

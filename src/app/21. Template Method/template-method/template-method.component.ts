@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { OnlineOrder } from '../models/online.order';
+import { StoreOrder } from '../models/store.order';
 
 @Component({
   selector: 'app-template-method',
   templateUrl: './template-method.component.html',
   styleUrls: ['./template-method.component.scss']
 })
-export class TemplateMethodComponent implements OnInit {
+export class TemplateMethodComponent {
 
-  constructor() { }
+  // resource: https://www.geeksforgeeks.org/template-method-design-pattern/
 
-  ngOnInit(): void {
+  public isGift: boolean;
+  public listLogs: string[] = [];
+
+  private onlineOrder: OnlineOrder;
+  private storeOrder: StoreOrder;
+
+  public btnOrderOnline(): void {
+    this.onlineOrder = new OnlineOrder();
+    this.listLogs = this.onlineOrder.processOrder(this.isGift);
   }
 
+  public btnOrderInStore(): void {
+    this.onlineOrder = new StoreOrder();
+    this.listLogs = this.onlineOrder.processOrder(this.isGift);
+  }
 }

@@ -1,1 +1,28 @@
-<p>template-method works!</p>
+<div class="container">
+  <h1>
+    Template Method Pattern
+  </h1>
+  <div class="content">
+    <mat-card>
+      <mat-card-content class="gift">
+        <mat-checkbox [(ngModel)]="isGift">
+          As gift
+        </mat-checkbox>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="btnOrderInStore()">Store ordering</button>
+        <button mat-raised-button color="primary" (click)="btnOrderOnline()">Online ordering</button>
+      </mat-card-actions>
+      <mat-card-header>
+        <mat-card-title>
+          Ordering process
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngFor="let logs of listLogs">
+          - {{ logs }}
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -85,6 +85,10 @@ const routes: Routes = [
   {
     path: 'template-method',
     loadChildren: () => import('./21. Template Method/template-method.module').then(m => m.TemplateMethodModule)
+  },
+  {
+    path: 'chain-of-responsibility',
+    loadChildren: () => import('./22. Chain of Responsibility/chain-of-responsibility.module').then(m => m.ChainOfResponsibilityModule)
   }
 ];
 

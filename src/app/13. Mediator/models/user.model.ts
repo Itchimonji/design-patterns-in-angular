@@ -11,8 +11,8 @@ export abstract class User {
     this._id = id;
   }
 
-  public abstract send(message: string, userId: number): void;
-  public abstract receive(message: string): void;
+  public abstract send(message: string, toUserId: number): void;
+  public abstract receive(message: string, fromUserId: number): void;
 
   public get mediator(): Mediator {
     return this._mediator;

@@ -8,9 +8,17 @@ interface IHash {
 export class ChatRoom implements Mediator {
   private userMap: IHash = {};
 
-  public notify(message: string, userId: number): void {
-    if (this.userMap[userId] != null) {
-      this.userMap[userId].receive(message);
+  public getUserNameByID(id: number): string {
+    return this.userMap[id].name;
+  }
+
+  public getUserByID(id: number): User {
+    return this.userMap[id];
+  }
+
+  public notify(message: string, toUserId: number, fromUserId: number): void {
+    if (this.userMap[toUserId] != null) {
+      this.userMap[toUserId].receive(message, fromUserId);
     }
   }
 

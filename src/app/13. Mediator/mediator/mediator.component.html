@@ -1,1 +1,54 @@
-<p>mediator works!</p>
+<div class="container">
+  <h1>
+    Mediator Pattern
+  </h1>
+  <div class="column">
+    <div class="row">
+      <mat-card *ngFor="let user of userList">
+        <mat-card-header>
+          <mat-card-title>
+            {{ user.name }}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div *ngFor="let msg of user.receivedMessages">
+            {{ msg }}
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <mat-form-field>
+            <mat-label>Answer</mat-label>
+            <input matInput [(ngModel)]="answer">
+          </mat-form-field>
+          <button mat-raised-button (click)="btnAnswer(user.id)">Answer</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="control-line">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            Control
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="column">
+            <mat-form-field appearance="fill" >
+              <mat-label>Send to</mat-label>
+              <mat-select [(ngModel)]="sendToUser">
+                <mat-option *ngFor="let user of userList" [value]="user">
+                  {{ user.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Message</mat-label>
+              <input matInput type="text" [(ngModel)]="sendMessage">
+            </mat-form-field>
+            <button mat-raised-button (click)="btnSend()">Send</button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

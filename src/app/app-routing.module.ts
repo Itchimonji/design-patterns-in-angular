@@ -89,7 +89,8 @@ const routes: Routes = [
   {
     path: 'chain-of-responsibility',
     loadChildren: () => import('./22. Chain of Responsibility/chain-of-responsibility.module').then(m => m.ChainOfResponsibilityModule)
-  }
+  },
+  { path: 'interpreter', loadChildren: () => import('./23. Interpreter/interpreter.module').then(m => m.InterpreterModule) }
 ];
 
 @NgModule({

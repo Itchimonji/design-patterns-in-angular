@@ -23,7 +23,7 @@ export class TemplateMethodComponent {
   }
 
   public btnOrderInStore(): void {
-    this.onlineOrder = new StoreOrder();
-    this.listLogs = this.onlineOrder.processOrder(this.isGift);
+    this.storeOrder = new StoreOrder();
+    this.listLogs = this.storeOrder.processOrder(this.isGift);
   }
 }

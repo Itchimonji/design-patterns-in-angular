@@ -10,7 +10,7 @@
 - short description: create a related object family
 - applicability: system is capsulated of the creation & composition of its models
 - visual resource: https://refactoring.guru/design-patterns/abstract-factory
-- expandability: concrete factories as singletons, factory method for creation of concrete objects, for too much objects you can use the Prototype Patterm 
+- expandability: concrete factories as singletons, factory method for creation of concrete objects, for too much objects you can use the Prototype Pattern 
 
 ##### UML
 

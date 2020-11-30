@@ -1,5 +1,7 @@
-import { event } from './event.enum';
+
+import { User } from './user.model';
 
 export interface Mediator {
-  notify(sender: object, event: event): void;
+  notify(message: string, userId: number): void;
+  addUser(user: User): void;
 }

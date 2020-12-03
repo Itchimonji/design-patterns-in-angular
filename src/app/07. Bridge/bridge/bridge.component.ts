@@ -23,27 +23,27 @@ export class BridgeComponent {
     this.remoteRadio = new AdvancedRemoteControl(this.radio);
   }
 
-  public btnTogglePower(remote: Abstraction) {
+  public btnTogglePower(remote: Abstraction): void {
     remote.togglePower();
   }
 
-  public btnVolumeDown(remote: Abstraction) {
+  public btnVolumeDown(remote: Abstraction): void {
     remote.volumeDown();
   }
 
-  public btnVolumeUp(remote: Abstraction) {
+  public btnVolumeUp(remote: Abstraction): void {
     remote.volumeUp();
   }
 
-  public btnChannelDown(remote: Abstraction) {
+  public btnChannelDown(remote: Abstraction): void {
     remote.channelDown();
   }
 
-  public btnChannelUp(remote: Abstraction) {
+  public btnChannelUp(remote: Abstraction): void {
     remote.channelUp();
   }
 
-  public btnMute(advancedRemoteControl: RefinedAbstraction) {
+  public btnMute(advancedRemoteControl: RefinedAbstraction): void {
     advancedRemoteControl.mute();
   }
 }

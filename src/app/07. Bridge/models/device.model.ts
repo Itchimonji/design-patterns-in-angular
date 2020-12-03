@@ -9,9 +9,8 @@ export interface Device {
   setChannel(channel: number): number;
 }
 
-// concrete Implementator A
+// concrete Implementor A
 export class Radio implements Device {
-
   private enabled: boolean;
   private volume: number;
   private channel: number;
@@ -45,7 +44,7 @@ export class Radio implements Device {
     return this.getVolume();
   }
 
-  public getChannel() {
+  public getChannel(): number {
     return this.channel;
   }
 
@@ -55,9 +54,8 @@ export class Radio implements Device {
   }
 }
 
-// concrete Implementator B
+// concrete Implementor B
 export class TV implements Device {
-
   private enabled: boolean;
   private volume: number;
   private channel: number;

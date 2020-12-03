@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Cat, NorwegianForest} from "../models/cat.model";
-import {Toy, ToyCat} from "../models/toy.model";
+import {Toy, AnyToy} from "../models/toy.model";
 import {CatAdapter} from "../models/cat.adapter";
 
 @Component({
@@ -25,15 +25,15 @@ export class AdapterComponent {
     this.client();
   }
 
-  public btnCatSound() {
+  public btnCatSound(): void {
     this.catSounds.push(this.cat.makeSound());
   }
 
-  public btnToySound() {
+  public btnToySound(): void {
     this.toySounds.push(this.toy.squeak());
   }
 
-  public btnCatAdapterSound() {
+  public btnCatAdapterSound(): void {
     this.catAdapterSounds.push(this.catAdapter.squeak());
   }
 
@@ -43,7 +43,7 @@ export class AdapterComponent {
     // https://www.geeksforgeeks.org/adapter-pattern/
 
     this.cat = new NorwegianForest();
-    this.toy = new ToyCat();
+    this.toy = new AnyToy();
     this.catAdapter = new CatAdapter(this.cat);
   }
 

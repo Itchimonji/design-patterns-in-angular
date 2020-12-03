@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import {CoffeeFacade, Facade} from "../models/facade.model";
+import { Component } from '@angular/core';
+import { CoffeeFacade, Facade } from "../models/facade.model";
 
 @Component({
   selector: 'app-facade',
   templateUrl: './facade.component.html',
   styleUrls: ['./facade.component.scss']
 })
-export class FacadeComponent implements OnInit {
+export class FacadeComponent {
   public logProduction: string[];
   private facade: Facade;
 
@@ -15,13 +15,9 @@ export class FacadeComponent implements OnInit {
     this.logProduction = new Array<string>();
   }
 
-  ngOnInit(): void {
-  }
-
-  public btnProduceCoffee() {
+  public btnProduceCoffee(): void {
     const log = this.facade.produce();
     console.log(log);
     this.logProduction.push(log);
   }
-
 }

@@ -20,7 +20,7 @@ export class CoffeeFacade implements Facade {
   }
 
   public produce(): string {
-    let result = '[Facade]: We need to produce coffee: ';
+    let result = '[Facade]: We need to produce coffee!! ';
     result += this.trader.getCoffee();
     result += this.mill.grindCoffee();
     result += this.drink.cook();

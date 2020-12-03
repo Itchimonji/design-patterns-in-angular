@@ -3,7 +3,7 @@ export interface Toy {
   squeak(): string;
 }
 
-export class ToyCat implements Toy {
+export class AnyToy implements Toy {
   public squeak(): string {
     return 'squeaaaaaak...';
   }

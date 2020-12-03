@@ -7,9 +7,9 @@
       Food planning
     </mat-card-title>
     <mat-card-actions>
-      <button mat-raised-button (click)="btnEatPizza()">Eat Pizza</button>
-      <button mat-raised-button (click)="btnEatWrap()">Eat Wrap</button>
-      <button mat-raised-button (click)="btnEatTacko()">Eat Tacko</button>
+      <button mat-raised-button (click)="btnEatPizza()" color="primary">Eat Pizza</button>
+      <button mat-raised-button (click)="btnEatWrap()" color="primary"> Eat Wrap</button>
+      <button mat-raised-button (click)="btnEatTacko()" color="primary">Eat Tacko</button>
     </mat-card-actions>
     <mat-card-content>
       <div *ngFor="let currentMeal of foodPlanning; trackBy: trackByFn">

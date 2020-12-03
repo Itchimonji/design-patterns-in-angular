@@ -1,6 +1,6 @@
 <div class="container">
   <h1>
-    Mediator Pattern
+    Mediator Pattern (Intermediary, Controller)
   </h1>
   <div class="column">
     <div class="row">
@@ -20,7 +20,7 @@
             <mat-label>Answer</mat-label>
             <input matInput [(ngModel)]="answer">
           </mat-form-field>
-          <button mat-raised-button (click)="btnAnswer(user.id)">Answer</button>
+          <button mat-raised-button (click)="btnAnswer(user.id)" color="primary">Answer</button>
         </mat-card-actions>
       </mat-card>
     </div>
@@ -45,7 +45,7 @@
               <mat-label>Message</mat-label>
               <input matInput type="text" [(ngModel)]="sendMessage">
             </mat-form-field>
-            <button mat-raised-button (click)="btnSend()">Send</button>
+            <button mat-raised-button (click)="btnSend()" color="primary">Send</button>
           </div>
         </mat-card-content>
       </mat-card>

@@ -1,6 +1,6 @@
 <div class="container">
   <h1>
-    Memento Pattern
+    Memento Pattern (Snapshot)
   </h1>
   <div class="content">
     <mat-card>
@@ -10,21 +10,21 @@
             <mat-label>Title</mat-label>
             <input matInput placeholder="Default Card" [(ngModel)]="title" id="inputTitle">
           </mat-form-field>
-          <button mat-raised-button (click)="btnChangeTitle(title)">Change title</button>
+          <button mat-raised-button (click)="btnChangeTitle(title)" color="primary">Change title</button>
         </div>
         <div>
           <mat-form-field>
             <mat-label>Description</mat-label>
             <input matInput placeholder="Default card for a lot of use cases" [(ngModel)]="description" id="inputDescription">
           </mat-form-field>
-          <button mat-raised-button (click)="btnChangeDescription(description)">Change description</button>
+          <button mat-raised-button (click)="btnChangeDescription(description)" color="primary">Change description</button>
         </div>
         <div>
           <mat-form-field>
             <mat-label>Color</mat-label>
             <input matInput placeholder="Red" [(ngModel)]="color" id="inputColor">
           </mat-form-field>
-          <button mat-raised-button (click)="btnChangeColor(color)">Change Color</button>
+          <button mat-raised-button (click)="btnChangeColor(color)" color="primary">Change Color</button>
         </div>
         <div>
           <mat-divider></mat-divider>

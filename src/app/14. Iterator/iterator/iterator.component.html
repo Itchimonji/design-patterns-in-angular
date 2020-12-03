@@ -9,10 +9,10 @@
           <mat-label>Add item to collection</mat-label>
           <input matInput placeholder="Some value" [(ngModel)]="value" id="input">
         </mat-form-field>
-        <button mat-raised-button (click)="btnAddItemToCollection(value)">Add Item</button>
+        <button mat-raised-button (click)="btnAddItemToCollection(value)" color="primary">Add Item</button>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button (click)="btnSliceCollectionItems()">Get items</button>
+        <button mat-raised-button (click)="btnSliceCollectionItems()" color="primary">Get items</button>
       </mat-card-actions>
       <mat-card-content>
         <div>

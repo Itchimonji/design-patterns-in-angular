@@ -1,1 +1,25 @@
-<p>command works!</p>
+<div class="container">
+  <h1>
+    Command Pattern (Action, Transaction)
+  </h1>
+  <div class="content">
+    <mat-card>
+      <mat-card-actions>
+        <button mat-raised-button (click)="btnOpen()" color="primary">Open</button>
+        <button mat-raised-button (click)="btnEdit()" color="primary">Edit</button>
+        <button mat-raised-button (click)="btnSave()" color="primary">Save</button>
+        <button mat-raised-button (click)="btnClose()" color="primary">Close</button>
+      </mat-card-actions>
+      <mat-card-header>
+        <mat-card-title>
+          Current editor state
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngFor="let log of listLog">
+          {{ log }}
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -11,7 +11,7 @@
         It's only a cat
       </mat-card-subtitle>
       <mat-card-actions>
-        <button mat-raised-button (click)="btnCatSound()">Make sounds</button>
+        <button mat-raised-button (click)="btnCatSound()" color="primary">Make sounds</button>
       </mat-card-actions>
       <mat-card-content>
         <div *ngFor="let catSound of catSounds">
@@ -28,7 +28,7 @@
         It's only a toy
       </mat-card-subtitle>
       <mat-card-actions>
-        <button mat-raised-button (click)="btnToySound()">Make sounds</button>
+        <button mat-raised-button (click)="btnToySound()" color="primary">Make sounds</button>
       </mat-card-actions>
       <mat-card-content>
         <div *ngFor="let toySound of toySounds">
@@ -45,7 +45,7 @@
           It's a toy, but imitates a cat :O
       </mat-card-subtitle>
       <mat-card-actions>
-        <button mat-raised-button (click)="btnCatAdapterSound()">Make sounds</button>
+        <button mat-raised-button (click)="btnCatAdapterSound()" color="primary">Make sounds</button>
       </mat-card-actions>
       <mat-card-content>
 

@@ -41,9 +41,9 @@ export class VisitorComponent {
       fruit.accept(this.fruitPartitioner);
     });
 
-    this.log.push('Oranges: ' + this.fruitPartitioner.Oranges.length.toString());
-    this.log.push('Apples: ' + this.fruitPartitioner.Apples.length.toString());
-    this.log.push('Bananas: ' + this.fruitPartitioner.Bananas.length.toString());
-    this.log.push('Cherries: ' + this.fruitPartitioner.Cherries.length.toString());
+    this.log.push('Oranges: ' + this.fruitPartitioner.oranges.length.toString());
+    this.log.push('Apples: ' + this.fruitPartitioner.apples.length.toString());
+    this.log.push('Bananas: ' + this.fruitPartitioner.bananas.length.toString());
+    this.log.push('Cherries: ' + this.fruitPartitioner.cherries.length.toString());
   }
 }

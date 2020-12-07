@@ -10,7 +10,6 @@ export class ChannelA implements Observer {
 
   public get messages(): string[] {
     return [...this.listMessages];
-
   }
   public update(subject: Subject): void {
     if (!(subject instanceof ChannelServer)) {
@@ -34,8 +33,8 @@ export class ChannelB implements Observer {
 
   public get messages(): string[] {
     return [...this.listMessages];
-
   }
+
   public update(subject: Subject): void {
     if (!(subject instanceof ChannelServer)) {
       this.listMessages.push('Invalid sender.');

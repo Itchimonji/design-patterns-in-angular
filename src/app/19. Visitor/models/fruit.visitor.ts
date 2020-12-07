@@ -2,10 +2,10 @@ import { Fruit } from './fruit.interface';
 
 // Visitor
 export interface FruitVisitor {
-  Oranges: Fruit[];
-  Apples: Fruit[];
-  Bananas: Fruit[];
-  Cherries: Fruit[];
+  oranges: Fruit[];
+  apples: Fruit[];
+  bananas: Fruit[];
+  cherries: Fruit[];
   visitOrange(fruit: Fruit): void;
   visitApple(fruit: Fruit): void;
   visitBanana(fruit: Fruit): void;
@@ -35,19 +35,19 @@ export class FruitPartitioner implements FruitVisitor {
     this.listCherry.push(fruit);
   }
 
-  public get Oranges(): Fruit[] {
+  public get oranges(): Fruit[] {
     return this.listOrange;
   }
 
-  public get Apples(): Fruit[] {
+  public get apples(): Fruit[] {
     return this.listApple;
   }
 
-  public get Bananas(): Fruit[] {
+  public get bananas(): Fruit[] {
     return this.listBanana;
   }
 
-  public get Cherries(): Fruit[] {
+  public get cherries(): Fruit[] {
     return this.listCherry;
   }
 }

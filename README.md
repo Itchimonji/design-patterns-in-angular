@@ -235,6 +235,32 @@
 
 ![Command Example](./readme/images/17.%20Command%20example.jpg)
 
+### Observer
+
+- short description: define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing
+- visual resource: https://refactoring.guru/design-patterns/observer
+
+##### UML
+
+![Observer](./readme/images/18.%20Observer.jpg)
+
+##### UML: example of this repo
+
+![Observer Example](./readme/images/18.%20Observer%20example.jpg)
+
+### Visitor
+
+- short description: separate algorithms from the objects on which they operate
+- visual resource: https://refactoring.guru/design-patterns/visitor
+
+##### UML
+
+![Visitor](./readme/images/19.%20Visitor.jpg)
+
+##### UML: example of this repo
+
+![Visitor Example](./readme/images/19.%20Visitor%20example.jpg)
+
 ## Resources
 
 - Design Patterns by GoF

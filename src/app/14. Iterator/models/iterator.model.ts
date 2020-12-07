@@ -16,7 +16,7 @@ export class AlphabeticalOrderIterator implements Iterator<string> {
     }
   }
 
-  public rewind() {
+  public rewind(): void {
     this.position = this.reverse ? this.collection.count - 1 : 0;
   }
 

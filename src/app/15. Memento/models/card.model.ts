@@ -1,7 +1,7 @@
 export interface Card {
-   title: string;
-   description: string;
-   color: string;
+  title: string;
+  description: string;
+  color: string;
 }
 
 export class MatCard implements Card {

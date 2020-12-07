@@ -2,15 +2,15 @@ import { Iterator } from './iterator.interface';
 import { Aggregator } from './aggregator.interface';
 import { AlphabeticalOrderIterator } from './iterator.model';
 
-// aggregator = collection
+// concrete Aggregate = collection
 export class WordsCollection implements Aggregator {
   private collectionItems: string[] = [];
 
-  get items(): string[] {
+  public get items(): string[] {
     return this.collectionItems;
   }
 
-  get count(): number {
+  public get count(): number {
     return this.collectionItems.length;
   }
 

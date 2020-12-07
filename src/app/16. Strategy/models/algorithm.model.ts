@@ -2,7 +2,7 @@ import { Strategy } from './strategy.model';
 
 export class Algorithm {
   private _strategy: Strategy;
-  private arr: number [] = [54, 2, 89, 12, 24, 68, 34, 77, 31, 40, 92];
+  private arr: number[] = [54, 2, 89, 12, 24, 68, 34, 77, 31, 40, 92];
 
   constructor(strategy: Strategy) {
     this._strategy = strategy;

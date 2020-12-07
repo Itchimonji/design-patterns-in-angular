@@ -170,6 +170,71 @@
 
 ![Proxy Example](./readme/images/12.%20Proxy%20example.jpg)
 
+### Mediator
+
+- short description: reduce chaotic dependencies between objects; only collaboration via a mediator
+- visual resource: https://refactoring.guru/design-patterns/mediator
+
+##### UML
+
+![Mediator](./readme/images/13.%20Mediator.jpg)
+
+##### UML: example of this repo
+
+![Mediator Example](./readme/images/13.%20Mediator%20example.jpg)
+
+### Iterator
+
+- short description: traverse elements of a collection without exposing its underlying representation
+- visual resource: https://refactoring.guru/design-patterns/iterator
+
+##### UML
+
+![Iterator](./readme/images/14.%20Iterator.jpg)
+
+##### UML: example of this repo
+
+![Iterator Example](./readme/images/14.%20Iterator%20example.jpg)
+
+### Memento
+
+- short description: save and restore the previous state of an object without revealing the details of its implementation
+- visual resource: https://refactoring.guru/design-patterns/memento
+
+##### UML
+
+![Memento](./readme/images/15.%20Memento.jpg)
+
+##### UML: example of this repo
+
+![Memento Example](./readme/images/15.%20Memento%20example.jpg)
+
+### Strategy
+
+- short description: define a family of algorithms, put each of them into a separate class, and make their objects interchangeable
+- visual resource: https://refactoring.guru/design-patterns/strategy
+
+##### UML
+
+![Strategy](./readme/images/16.%20Strategy.jpg)
+
+##### UML: example of this repo
+
+![Strategy Example](./readme/images/16.%20Strategy%20example.jpg)
+
+### Command
+
+- short description: turns a request into a stand-alone object that contains all information about the request
+- visual resource: https://refactoring.guru/design-patterns/command
+
+##### UML
+
+![Command](./readme/images/17.%20Command.jpg)
+
+##### UML: example of this repo
+
+![Command Example](./readme/images/17.%20Command%20example.jpg)
+
 ## Resources
 
 - Design Patterns by GoF

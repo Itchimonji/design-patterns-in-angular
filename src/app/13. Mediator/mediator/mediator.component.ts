@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Mediator } from '../models/mediator.interface';
 import { ChatRoom } from '../models/chat-room.mediator';
 import { ChatUser } from '../models/chat-user.model';
-import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-mediator',

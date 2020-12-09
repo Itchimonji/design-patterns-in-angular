@@ -1,6 +1,7 @@
 import { MobilePhoneOptions } from './phone.options';
 import { LockedScreen, MobilePhoneState } from './screen.state';
 
+// Context
 export class MobilePhone implements MobilePhoneOptions {
   private _state: MobilePhoneState;
   private countLockedScreen: number;

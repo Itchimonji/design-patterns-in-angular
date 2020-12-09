@@ -261,6 +261,45 @@
 
 ![Visitor Example](./readme/images/19.%20Visitor%20example.jpg)
 
+### State
+
+- short description: lets an object alter its behavior when its internal state changes. It appears as if the object changed its class
+- visual resource: https://refactoring.guru/design-patterns/state
+
+##### UML
+
+![State](./readme/images/20.%20State.jpg)
+
+##### UML: example of this repo
+
+![State Example](./readme/images/20.%20State%20example.jpg)
+
+### Template Method
+
+- short description: defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure
+- visual resource: https://refactoring.guru/design-patterns/state
+
+##### UML
+
+![Template Method](./readme/images/21.%20Template%20Method.jpg)
+
+##### UML: example of this repo
+
+![Template Method Example](./readme/images/21.%20Template%20Method%20example.jpg)
+
+### Chain Of Responsibility
+
+- short description: pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain
+- visual resource: https://refactoring.guru/design-patterns/state
+
+##### UML
+
+![Chain of Responsibility Method](./readme/images/22.%20Chain%20Of%20Responsibility.jpg)
+
+##### UML: example of this repo
+
+![Chain of Responsibility Method Example](./readme/images/22.%20Chain%20Of%20Responsibility%20example.jpg)
+
 ## Resources
 
 - Design Patterns by GoF

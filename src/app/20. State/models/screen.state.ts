@@ -1,5 +1,6 @@
 import { MobilePhoneOptions } from './phone.options';
 
+// State
 export abstract class MobilePhoneState implements MobilePhoneOptions {
   public get name(): string {
     throw new Error('Invalid operation');

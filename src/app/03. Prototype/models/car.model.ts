@@ -22,3 +22,4 @@ export class CarPrototype implements Prototype {
     return Object.assign(Object.create(this), this);
   }
 }
+

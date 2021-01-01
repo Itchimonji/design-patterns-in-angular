@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CommandRoutingModule } from './command-routing.module';
 import { CommandComponent } from './command/command.component';
-import {AngularMaterialModule} from '../modules/angular-material.module';
+import { AngularMaterialModule } from '../modules/angular-material.module';
 
 
 @NgModule({

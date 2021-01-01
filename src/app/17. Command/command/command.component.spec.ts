@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CommandComponent } from './command.component';
+import { AngularMaterialModule } from '../../modules/angular-material.module';
 
 describe('CommandComponent', () => {
   let component: CommandComponent;
@@ -8,9 +9,9 @@ describe('CommandComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommandComponent ]
-    })
-    .compileComponents();
+      declarations: [CommandComponent],
+      imports: [AngularMaterialModule]
+    }).compileComponents();
   });
 
   beforeEach(() => {

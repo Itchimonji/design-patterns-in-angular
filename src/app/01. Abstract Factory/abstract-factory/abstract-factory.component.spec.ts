@@ -5,7 +5,7 @@ import { AbstractTheme } from '../models/theme.model';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('CommandComponent', () => {
+describe('AbstractFactoryComponent', () => {
   let component: AbstractFactoryComponent;
   let fixture: ComponentFixture<AbstractFactoryComponent>;
 

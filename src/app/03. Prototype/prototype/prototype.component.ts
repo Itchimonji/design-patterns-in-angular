@@ -8,23 +8,25 @@ import { Engine, PetrolEngine } from '../models/engine.model';
   styleUrls: ['./prototype.component.scss']
 })
 export class PrototypeComponent implements OnInit {
-
-  public cars: Prototype[];
+  private readonly _cars: Prototype[];
+  public get cars(): Prototype[] {
+    return this._cars;
+  }
   public selectedColor: string;
 
   constructor() {
-    this.cars = new Array<Prototype>();
+    this._cars = new Array<Prototype>();
   }
 
   ngOnInit(): void {
     const engine: Engine = new PetrolEngine(2000);
-    this.cars.push(new CarPrototype('Toyota', 'red', engine));
+    this._cars.push(new CarPrototype('Toyota', 'red', engine));
     this.selectedColor = 'red';
   }
 
   btnCopyLastCarWithNewColor(): void {
-    const newCar: Prototype = this.cars[this.cars.length - 1].clone();
+    const newCar: Prototype = this._cars[this._cars.length - 1].clone();
     newCar.color = this.selectedColor;
-    this.cars.push(newCar);
+    this._cars.push(newCar);
   }
 }

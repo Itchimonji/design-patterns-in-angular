@@ -1,16 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { clientCode } from '../models/client.utils';
 import { PizzaCreator, TackoCreator, WrapCreator } from '../models/creator.model';
-
-export class FoodPlanningHistory {
-  index: number;
-  activity: string;
-
-  constructor(index: number, activity: string) {
-    this.index = index;
-    this.activity = activity;
-  }
-}
+import {FoodPlanningHistory} from '../models/food-planning-history.model';
 
 @Component({
   selector: 'app-factory-method',
@@ -18,10 +9,13 @@ export class FoodPlanningHistory {
   styleUrls: ['./factory-method.component.scss']
 })
 export class FactoryMethodComponent {
-  public foodPlanning: FoodPlanningHistory[];
+  private readonly _foodPlanning: FoodPlanningHistory[];
+  public get foodPlanning(): FoodPlanningHistory[] {
+    return this._foodPlanning;
+  }
 
   constructor() {
-    this.foodPlanning = new Array<FoodPlanningHistory>();
+    this._foodPlanning = new Array<FoodPlanningHistory>();
   }
 
   public trackByFn(index, item: FoodPlanningHistory): number {
@@ -44,6 +38,6 @@ export class FactoryMethodComponent {
   }
 
   private addActivityToHistory(activity: string) {
-    this.foodPlanning.push(new FoodPlanningHistory(this.foodPlanning.length, activity));
+    this._foodPlanning.push(new FoodPlanningHistory(this._foodPlanning.length, activity));
   }
 }

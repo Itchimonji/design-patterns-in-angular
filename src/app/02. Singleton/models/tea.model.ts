@@ -7,7 +7,7 @@ export interface AbstractTea {
 }
 
 export class BlackTea implements AbstractTea {
-  private static instance: BlackTea;
+  private static instance: AbstractTea;
   private readonly id: number;
   private type = 'Black Tea';
 
@@ -17,8 +17,18 @@ export class BlackTea implements AbstractTea {
     this.id = getRandomInt(100);
   }
 
-  public static getInstance(): BlackTea {
+  public static getInstance(): AbstractTea {
     return this.instance || (this.instance = new this());
+  }
+
+  public static setTestingInstance(instance: AbstractTea): void {
+    alert('set test instance');
+    this.instance = instance;
+  }
+
+  public static resetForTesting(): void {
+    alert('reset test instance');
+    this.instance = null;
   }
 
   public getType(): string {
@@ -35,7 +45,7 @@ export class BlackTea implements AbstractTea {
 }
 
 export class FruitTea implements AbstractTea {
-  private static instance: FruitTea;
+  private static instance: AbstractTea;
   private readonly id: number;
   private type = 'Fruit Tea';
 
@@ -45,8 +55,18 @@ export class FruitTea implements AbstractTea {
     this.id = getRandomInt(100);
   }
 
-  public static getInstance(): FruitTea {
+  public static getInstance(): AbstractTea {
     return this.instance || (this.instance = new this());
+  }
+
+  public static setTestingInstance(instance: AbstractTea): void {
+    alert('set test instance');
+    this.instance = instance;
+  }
+
+  public static resetForTesting(): void {
+    alert('reset test instance');
+    this.instance = null;
   }
 
   public getType(): string {

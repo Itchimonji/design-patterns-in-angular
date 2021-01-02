@@ -21,7 +21,7 @@ describe('SingletonComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should have an unique instance of black tea', () => {
+  it('should have an unique instance of Black Tea', () => {
     component.btnGetNewBlackTeaInstance();
     const blackTeaOfComponent = component.blackTea;
     const blackTeaOfTest = BlackTea.getInstance();
@@ -30,7 +30,7 @@ describe('SingletonComponent', () => {
     expect(blackTeaOfComponent.getId()).toBeLessThan(100);
   });
 
-  it('should have an unique instance of fruit tea', () => {
+  it('should have an unique instance of Fruit Tea', () => {
     component.btnGetNewFruitTeaInstance();
     const fruitTeaOfComponent = component.fruitTea;
     const fruitTeaOfTest = FruitTea.getInstance();
@@ -38,4 +38,19 @@ describe('SingletonComponent', () => {
     expect(fruitTeaOfComponent.getType()).toEqual('Fruit Tea');
     expect(fruitTeaOfComponent.getId()).toBeLessThan(100);
   });
+
+  it('should reset Black Tea instance', () => {
+    window.alert = jest.fn();
+    const oldId: number = component.blackTea.getId();
+    BlackTea.resetForTesting();
+    expect(BlackTea.getInstance().getId()).not.toBe(oldId);
+  });
+
+  it('should have a Fruit Tea instance', () => {
+    window.alert = jest.fn();
+    const oldId: number = component.blackTea.getId();
+    BlackTea.setTestingInstance(FruitTea.getInstance());
+    expect(BlackTea.getInstance().getType()).toEqual('Fruit Tea');
+  });
+
 });

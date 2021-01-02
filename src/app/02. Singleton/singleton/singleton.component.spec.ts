@@ -26,6 +26,8 @@ describe('SingletonComponent', () => {
     const blackTeaOfComponent = component.blackTea;
     const blackTeaOfTest = BlackTea.getInstance();
     expect(blackTeaOfComponent).toEqual(blackTeaOfTest);
+    expect(blackTeaOfComponent.getType()).toEqual('Black Tea');
+    expect(blackTeaOfComponent.getId()).toBeLessThan(100);
   });
 
   it('should have an unique instance of fruit tea', () => {
@@ -33,5 +35,7 @@ describe('SingletonComponent', () => {
     const fruitTeaOfComponent = component.fruitTea;
     const fruitTeaOfTest = FruitTea.getInstance();
     expect(fruitTeaOfComponent).toEqual(fruitTeaOfTest);
+    expect(fruitTeaOfComponent.getType()).toEqual('Fruit Tea');
+    expect(fruitTeaOfComponent.getId()).toBeLessThan(100);
   });
 });

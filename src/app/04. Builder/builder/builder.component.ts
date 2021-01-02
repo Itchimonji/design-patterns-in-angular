@@ -10,10 +10,13 @@ import {House} from '../models/house.model';
 })
 export class BuilderComponent implements OnInit {
 
-  public houses: House[];
+  private readonly _houses: House[];
+  public get houses(): House[] {
+    return this._houses;
+  }
 
   constructor() {
-    this.houses = new Array<House>();
+    this._houses = new Array<House>();
   }
 
   ngOnInit(): void {
@@ -23,11 +26,10 @@ export class BuilderComponent implements OnInit {
 
     director.constructFamilyHouse();
     const familyHouse = builder.getResult();
-    this.houses.push(familyHouse);
+    this._houses.push(familyHouse);
 
     director.constructVilla();
     const villa = builder.getResult();
-    this.houses.push(villa);
+    this._houses.push(villa);
   }
-
 }

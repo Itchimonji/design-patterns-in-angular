@@ -1,4 +1,4 @@
-import { House, HouseModel } from './house.model';
+import { House, HouseImpl } from './house.model';
 
 export interface Builder {
   buildWalls(count: number): void;
@@ -19,7 +19,7 @@ export class HouseBuilder implements Builder {
   }
 
   private reset(): void {
-    this.house = new HouseModel();
+    this.house = new HouseImpl();
   }
 
   // e.g. buildPartA

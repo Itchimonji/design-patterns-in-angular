@@ -1,4 +1,4 @@
-import {Builder} from './builder.model';
+import { Builder } from './builder.model';
 
 export class Director {
   private builder: Builder;

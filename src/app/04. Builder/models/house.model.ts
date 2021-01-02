@@ -8,7 +8,16 @@ export interface House {
   basement: boolean;
 }
 
-export class HouseModel implements House {
+export class HouseImpl implements House {
+  constructor() {
+    this.walls = 0;
+    this.doors = 0;
+    this.windows = 0;
+    this.garden = false;
+    this.pool = false;
+    this.floors = 0;
+    this.basement = false;
+  }
   public walls: number;
   public doors: number;
   public windows: number;

@@ -49,8 +49,6 @@ export class FruitTea implements AbstractTea {
   private readonly id: number;
   private type = 'Fruit Tea';
 
-  protected static final test: number;
-
   private constructor() {
     // its important that the constructor is private
     // every time we create a new black tea, the constructor get a new id
